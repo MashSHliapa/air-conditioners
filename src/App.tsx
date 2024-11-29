@@ -1,7 +1,9 @@
+import { Layout } from './components/Layout/Layout';
+
 export function App() {
   return (
     <>
-      <div>Air conditioners</div>
+      <Layout />
     </>
   )
 }
