@@ -1,0 +1,168 @@
+@import '../Layout/Layout.scss';
+
+.navbar {
+  &__body {
+    @include breakpoint(sm) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      height: 440px;
+      background: #E9E9E9;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    line-height: 1.36;
+    color: #1D4F78;
+
+    @include breakpoint(sm) {
+      flex-direction: column;
+      align-items: start;
+      color: #161515;
+      margin: 80px 0px 0px 15px;
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 18px;
+
+    @include breakpoint(sm) {
+      margin-right: 0px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__item:not(:last-child):hover {
+    color: #FFB629;
+
+    @include breakpoint(md) {
+      color: inherit;
+    }
+  }
+
+  &__item:not(:last-child):hover .navbar__vector {
+    filter: invert(100%);
+
+    @include breakpoint(md) {
+      filter: none;
+    }
+  }
+
+  &__item {
+    @include breakpoint(md) {
+      font-size: 14px;
+    }
+
+    @include breakpoint(sm) {
+      font-size: 16px;
+    }
+  }
+
+  &__item:last-child .navbar__link {
+    background: #FFB629;
+    font-size: 14px;
+    padding: 5px 17px;
+
+    @include breakpoint(md) {
+      font-size: 12px;
+    }
+
+    @include breakpoint(sm) {
+      background: none;
+      font-size: inherit;
+      padding: 0;
+    }
+  }
+
+  &__item:last-child :hover {
+    box-shadow: inset 0px 1px 5px rgb(109, 105, 105);
+
+    @include breakpoint(sm) {
+      box-shadow: none;
+    }
+  }
+
+  &__item_menu {
+    position: relative;
+  }
+
+  &__item_menu .navbar__link {
+    cursor: pointer;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5px;
+
+    @include breakpoint(sm) {
+      justify-content: start;
+    }
+  }
+
+  &__vector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 12px;
+    margin-top: 2px;
+
+    @include breakpoint(md) {
+      margin-top: 0px;
+    }
+
+    @include breakpoint(sm) {
+      margin-top: 2px;
+    }
+  }
+}
+
+.info-menu {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  z-index: 5;
+  color: #FDF9F9;
+  background-color: #1D4F78;
+  padding: 20px 15px;
+  min-width: 152px;
+
+  @include breakpoint(sm) {
+    position: static;
+    background-color: inherit;
+    color: #1D4F78;
+    padding: 20px 10px 0px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    min-width: 132px;
+    font-size: 14px;
+
+    @include breakpoint(sm) {
+      font-size: 16px;
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 15px;
+
+    @include breakpoint(sm) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__item:hover {
+    color: #FFB629;
+
+    @include breakpoint(sm) {
+      color: inherit;
+    }
+  }
+}
