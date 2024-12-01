@@ -46,7 +46,7 @@ p {
 body {
   height: 100%;
   line-height: 1;
-  font-family: "Noto Sans", sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   font-weight: 400;
   font-size: 16px;
   color: #161515;
@@ -57,21 +57,15 @@ body {
     @media screen and (max-width: 1199.98px) {
       @content;
     }
-  }
-
-  @else if $size ==md {
+  } @else if $size ==md {
     @media screen and (max-width: 991.98px) {
       @content;
     }
-  }
-
-  @else if $size ==sm {
+  } @else if $size ==sm {
     @media screen and (max-width: 767.98px) {
       @content;
     }
-  }
-
-  @else if $size ==xs {
+  } @else if $size ==xs {
     @media screen and (max-width: 575.98px) {
       @content;
     }
@@ -82,4 +76,18 @@ body {
   max-width: 1130px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+._icon {
+  transition: transform 0.3s ease;
+}
+
+._icon:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
+
+  @media screen and (max-width: 991.98px) {
+    transform: none;
+    transition: none;
+  }
 }
