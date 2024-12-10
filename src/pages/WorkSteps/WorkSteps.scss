@@ -15,24 +15,6 @@
     }
   }
 
-  &__title {
-    color: #1d4f78;
-    font-size: 60px;
-    text-align: center;
-
-    @include breakpoint(md) {
-      font-size: 48px;
-    }
-
-    @include breakpoint(sm) {
-      font-size: 32px;
-    }
-
-    @include breakpoint(xs) {
-      font-size: 30px;
-    }
-  }
-
   &__steps {
     display: flex;
     justify-content: center;

@@ -1,0 +1,83 @@
+@import '../../components/Layout/Layout.scss';
+
+.payment-delivery {
+  background-color: #e9e9e9;
+
+  &__body {
+    padding: 50px 0;
+
+    @include breakpoint(md) {
+      padding: 30px 0;
+    }
+
+    @include breakpoint(sm) {
+      padding: 20px 0 30px;
+    }
+
+    @include breakpoint(xs) {
+      padding: 20px 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: 30px;
+
+    @include breakpoint(sm) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-around;
+    line-height: 1.36;
+
+    @include breakpoint(md) {
+      gap: 20px;
+    }
+
+    @include breakpoint(sm) {
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+    }
+  }
+
+  &__subtitle {
+    color: #636466;
+    font-size: 20px;
+    max-width: 310px;
+    margin-bottom: 20px;
+
+    @include breakpoint(xs) {
+      font-size: 16px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    color: #161515;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 24px;
+
+    @include breakpoint(xs) {
+      font-size: 20px;
+    }
+  }
+
+  &__text_delivery {
+    @include breakpoint(md) {
+      max-width: 200px;
+    }
+  }
+}

@@ -1,3 +1,4 @@
+import { Title } from '../../components/Title/Title';
 import './WorkSteps.scss';
 
 export const WorkSteps = () => {
@@ -5,7 +6,9 @@ export const WorkSteps = () => {
     <div className="workSteps">
       <div className="workSteps__container _container">
         <div className="workSteps__body">
-          <div className="workSteps__title">Как мы работаем</div>
+          <div className="workSteps__title">
+            <Title>Как мы работаем</Title>
+          </div>
           <div className="workSteps__steps">
             <div className="workSteps__step step">
               <h3 className="step__title">ШАГ 1</h3>
