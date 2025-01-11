@@ -1,0 +1,55 @@
+@import '../../components/Layout/Layout.scss';
+
+.contacts {
+  position: relative;
+  margin-top: 25px;
+
+  &__body {
+    padding: 20px 0 272px 0;
+
+    @include breakpoint(sm) {
+      padding: 15px 0 130px 0;
+    }
+
+    @include breakpoint(xs) {
+      padding: 15px 0 195px 0;
+    }
+  }
+
+  &__title .title__text,
+  &__subtitle {
+    color: #fdf9f9;
+  }
+
+  &__title .title__text {
+    font-size: 64px;
+
+    @include breakpoint(sm) {
+      font-size: 32px;
+    }
+  }
+
+  &__subtitle {
+    text-align: center;
+    font-size: 32px;
+    margin-top: 10px;
+
+    @include breakpoint(sm) {
+      font-size: 14px;
+      margin-top: 8px;
+    }
+  }
+
+  &__background {
+    position: relative;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #1d4f78b2;
+  }
+}

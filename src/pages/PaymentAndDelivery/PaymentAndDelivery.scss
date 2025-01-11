@@ -30,7 +30,6 @@
   &__row {
     display: flex;
     justify-content: space-around;
-    line-height: 1.36;
 
     @include breakpoint(md) {
       gap: 20px;

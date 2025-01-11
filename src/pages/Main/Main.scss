@@ -11,7 +11,6 @@
     position: relative;
     display: flex;
     justify-content: space-between;
-    line-height: 1.36;
     padding: 0px 45px 242px 56px;
 
     @include breakpoint(md) {
