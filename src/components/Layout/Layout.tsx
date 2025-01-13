@@ -1,5 +1,6 @@
 import { Contacts } from '../../pages/Contacts/Contacts';
 import { ContactsBoxes } from '../../pages/ContactsBoxes/ContactsBoxes';
+import { Kinds } from '../../pages/Kinds/Kinds';
 import { Main } from '../../pages/Main/Main';
 import { PaymentAndDelivery } from '../../pages/PaymentAndDelivery/PaymentAndDelivery';
 import { WorkSteps } from '../../pages/WorkSteps/WorkSteps';
@@ -15,6 +16,7 @@ export function Layout() {
       <WorkSteps />
       <Contacts />
       <ContactsBoxes />
+      <Kinds />
     </div>
   );
 }
