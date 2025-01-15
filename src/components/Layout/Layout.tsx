@@ -1,3 +1,4 @@
+import { About } from '../../pages/About/About';
 import { Contacts } from '../../pages/Contacts/Contacts';
 import { ContactsBoxes } from '../../pages/ContactsBoxes/ContactsBoxes';
 import { Kinds } from '../../pages/Kinds/Kinds';
@@ -17,6 +18,7 @@ export function Layout() {
       <Contacts />
       <ContactsBoxes />
       <Kinds />
+      <About />
     </div>
   );
 }

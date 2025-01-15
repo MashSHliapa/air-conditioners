@@ -1,0 +1,246 @@
+@import '../../components/Layout/Layout.scss';
+
+.about {
+  overflow-x: hidden;
+
+  &__body {
+    padding: 50px 0;
+
+    @include breakpoint(md) {
+      padding: 50px 0 40px;
+    }
+
+    @include breakpoint(sm) {
+      padding: 30px 0 30px;
+    }
+
+    @include breakpoint(xs) {
+      padding: 30px 0 20px;
+    }
+  }
+
+  &__body > *:not(:last-child) {
+    margin-bottom: 50px;
+
+    @include breakpoint(md) {
+      margin-bottom: 40px;
+    }
+
+    @include breakpoint(sm) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__about {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+
+    @include breakpoint(sm) {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+
+  &__info {
+    flex: 0 0 470px;
+
+    @include breakpoint(md) {
+      flex: 0 0 380px;
+    }
+
+    @include breakpoint(sm) {
+      flex: 0 0 100%;
+    }
+  }
+
+  &__title .title__text {
+    text-align: left;
+  }
+
+  &__text {
+    margin-top: 30px;
+
+    @include breakpoint(md) {
+      font-size: 14px;
+      margin-top: 15px;
+    }
+  }
+
+  &__text span {
+    display: block;
+    margin-top: 20px;
+  }
+
+  &__image {
+    flex: 0 1 565px;
+    max-height: 100%;
+    background: url('../../images/about.jpg') 0 0 / cover no-repeat;
+
+    @include breakpoint(sm) {
+      flex: 0 1 380px;
+    }
+
+    @include breakpoint(xs) {
+      flex: 0 1 260px;
+    }
+  }
+}
+
+.menu {
+  position: relative;
+  background: #e9e9e9;
+  padding: 15px 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 100%;
+    z-index: -1;
+    background-color: #e9e9e9;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+
+    @include breakpoint(md) {
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      row-gap: 35px;
+      column-gap: 30px;
+    }
+
+    @include breakpoint(sm) {
+      column-gap: 30px;
+    }
+
+    @include breakpoint(xs) {
+      flex-direction: column;
+      align-items: start;
+      gap: 20px;
+    }
+  }
+
+  &__column {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &__column:not(:last-child) {
+    margin-right: 10px;
+
+    @include breakpoint(sm) {
+      margin-right: 0;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #284b78;
+    border-radius: 15px;
+    width: 115px;
+    height: 120px;
+
+    @include breakpoint(sm) {
+      font-size: 14px;
+      width: 91px;
+      height: 95px;
+    }
+
+    @include breakpoint(xs) {
+      font-size: 14px;
+      width: 85px;
+      height: 93px;
+    }
+  }
+
+  &__icon img {
+    @include breakpoint(sm) {
+      max-width: 54px;
+      max-height: 55px;
+    }
+
+    @include breakpoint(xs) {
+      max-width: 54px;
+      max-height: 55px;
+    }
+  }
+
+  &__text {
+    font-weight: 500;
+    max-width: 201px;
+
+    @include breakpoint(sm) {
+      font-size: 14px;
+      max-width: 170px;
+    }
+  }
+}
+
+.certificates {
+  display: flex;
+  align-items: end;
+
+  @include breakpoint(sm) {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+    gap: 30px;
+  }
+
+  & > :not(:last-child) {
+    margin-right: 30px;
+
+    @include breakpoint(md) {
+      margin-right: 25px;
+    }
+
+    @include breakpoint(sm) {
+      margin-right: 0;
+    }
+  }
+
+  &__data {
+    flex: 0 1 410px;
+
+    @include breakpoint(md) {
+      flex: 0 1 325px;
+    }
+
+    @include breakpoint(sm) {
+      flex: 0 1 100%;
+    }
+  }
+
+  &__separator {
+    background: #636466;
+    height: 1px;
+    width: 100%;
+    margin: 0 auto 30px;
+
+    @include breakpoint(sm) {
+      margin: 0 auto 15px;
+    }
+  }
+
+  &__text {
+    font-weight: 500;
+
+    @include breakpoint(md) {
+      font-size: 14px;
+    }
+
+    @include breakpoint(sm) {
+      font-size: 12px;
+    }
+  }
+}
