@@ -24,45 +24,18 @@
     @include breakpoint(sm) {
       row-gap: 10px;
     }
-  }
-
-  &__part1 {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-
-    @include breakpoint(sm) {
-      flex: 0 0 100%;
-      justify-content: center;
-    }
 
     @include breakpoint(xs) {
       flex-direction: column;
-      gap: 10px;
     }
   }
 
-  &__mode {
+  &__part1 .mode-links__mode {
+    //предложить на одной строке
     @include breakpoint(xs) {
       max-width: 155px;
       text-align: center;
     }
-  }
-
-  &__icons {
-    display: flex;
-    gap: 10px;
-  }
-
-  &__icon {
-    display: flex;
-    align-items: center;
-  }
-
-  &__icon img {
-    display: block;
-    width: 100%;
-    height: 100%;
   }
 
   &__part2 {
@@ -73,21 +46,6 @@
       align-items: center;
       gap: 10px;
     }
-  }
-
-  &__phones-icons {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-
-    @include breakpoint(sm) {
-      gap: 10px;
-    }
-  }
-
-  &__phones {
-    display: flex;
-    gap: 10px;
   }
 
   &__search-favorite {

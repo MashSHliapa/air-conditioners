@@ -1,0 +1,30 @@
+@import '../Layout/Layout.scss';
+
+.phones-links {
+  &__phones-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    @include breakpoint(xs) {
+      gap: 10px;
+    }
+  }
+
+  &__phones {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 3px;
+  }
+
+  &__icons {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+  }
+}

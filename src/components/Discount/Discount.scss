@@ -1,0 +1,59 @@
+@import '../Layout/Layout.scss';
+
+.discount {
+  color: #ffb629;
+  background-color: #16151599;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  width: 190px;
+  height: 240px;
+  padding: 11px 20px 11px 20px;
+
+  @include breakpoint(sm) {
+    width: 115px;
+    height: 150px;
+    margin-top: 125px;
+    padding: 9px 10px 9px 9px;
+  }
+
+  @include breakpoint(xs) {
+    margin-top: 25px;
+  }
+
+  &__text {
+    font-size: 35px;
+
+    @include breakpoint(sm) {
+      font-size: 22px;
+    }
+  }
+
+  &__text span {
+    display: block;
+    font-size: 23px;
+
+    @include breakpoint(sm) {
+      font-size: 14px;
+    }
+  }
+
+  &__percent {
+    font-size: 73px;
+
+    @include breakpoint(sm) {
+      font-size: 45px;
+    }
+  }
+
+  &__condition {
+    color: #fdf9f9;
+    font-size: 14px;
+    text-align: right;
+    text-transform: lowercase;
+
+    @include breakpoint(sm) {
+      font-size: 8.7px;
+    }
+  }
+}

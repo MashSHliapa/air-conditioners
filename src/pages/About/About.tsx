@@ -1,5 +1,5 @@
 import { Title } from '../../components/Title/Title';
-import photo from '../../images/about.jpg';
+import { Data } from '../../components/Data/Data';
 import menu1 from '../../icons/menu1.svg';
 import menu2 from '../../icons/menu2.svg';
 import menu3 from '../../icons/menu3.svg';
@@ -33,7 +33,7 @@ export const About = () => {
                 </span>
               </p>
             </div>
-            <div className="about__image _ibm">{/* <img src={photo} alt="photo" /> */}</div>
+            <div className="about__image"></div>
           </div>
           <div className="about_menu menu">
             <div className="menu__row">
@@ -45,7 +45,6 @@ export const About = () => {
                   Широкий ассортимент. Мы являемся официальными дилерами проверенных марок кондиционеров.
                 </h5>
               </div>
-
               <div className="menu__column">
                 <div className="menu__icon">
                   <img src={menu2} alt="menu2" />
@@ -54,7 +53,6 @@ export const About = () => {
                   Монтаж <br /> производится <br /> в соответствии <br /> с ГОСТ РБ.
                 </h5>
               </div>
-
               <div className="menu__column">
                 <div className="menu__icon">
                   <img src={menu3} alt="menu3" />
@@ -63,7 +61,6 @@ export const About = () => {
               </div>
             </div>
           </div>
-
           <div className="about__certificates certificates">
             <div className="certificates__item">
               <img src={certificate1} alt="certificate1" />
@@ -72,20 +69,7 @@ export const About = () => {
               <img src={certificate2} alt="certificate2" />
             </div>
             <div className="certificates__data">
-              <div className="certificates__separator"></div>
-              <h5 className="certificates__text">
-                ИП Кондратий Роман Сергеевич
-                <br />
-                УНП 693253077
-                <br />
-                Свидетельства о государственной регистрации
-                <br />
-                №693253077,
-                <br />
-                выданным Борисовским исполнительным комитетом 06.09.2023 г.,
-                <br />
-                Адрес: Минская обл., г. Борисов, 1 пер. Маркова д.6
-              </h5>
+              <Data />
             </div>
           </div>
         </div>

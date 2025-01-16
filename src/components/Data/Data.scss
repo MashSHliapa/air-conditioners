@@ -1,0 +1,26 @@
+@import '../Layout/Layout.scss';
+
+.data {
+  &__separator {
+    background: #636466;
+    height: 1px;
+    width: 100%;
+    margin: 0 auto 30px;
+
+    @include breakpoint(sm) {
+      margin: 0 auto 15px;
+    }
+  }
+
+  &__text {
+    font-weight: 500;
+
+    @include breakpoint(md) {
+      font-size: 14px;
+    }
+
+    @include breakpoint(sm) {
+      font-size: 12px;
+    }
+  }
+}

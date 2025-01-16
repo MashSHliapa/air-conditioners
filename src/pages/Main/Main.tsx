@@ -1,3 +1,4 @@
+import { Discount } from '../../components/Discount/Discount';
 import background from '../../images/main_photo.jpg';
 import './Main.scss';
 
@@ -19,12 +20,8 @@ export const Main = () => {
               </a>
             </div>
           </div>
-          <div className="main__discount discount">
-            <div className="discount__text">
-              скидка <span>на монтаж</span>
-            </div>
-            <div className="discount__percent">50%</div>
-            <div className="discount__condition"> * при покупке кондиционера у нас</div>
+          <div className="main__discount">
+            <Discount />
           </div>
           <div className="main__background background _ibg">
             <img src={background} alt="background" />

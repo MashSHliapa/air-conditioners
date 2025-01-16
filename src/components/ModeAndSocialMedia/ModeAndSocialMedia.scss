@@ -1,0 +1,22 @@
+@import '../Layout/Layout.scss';
+.mode-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+
+  @include breakpoint(xs) {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__icons {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+  }
+}
