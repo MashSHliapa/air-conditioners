@@ -5,6 +5,7 @@ import { Kinds } from '../../pages/Kinds/Kinds';
 import { Main } from '../../pages/Main/Main';
 import { PaymentAndDelivery } from '../../pages/PaymentAndDelivery/PaymentAndDelivery';
 import { WorkSteps } from '../../pages/WorkSteps/WorkSteps';
+import { Footer } from '../Footer/Footer';
 import { Header } from '../Header/Header';
 import './Layout.scss';
 
@@ -13,6 +14,7 @@ export function Layout() {
     <div className="layout">
       <Header />
       <Main />
+      <Footer />
       <PaymentAndDelivery />
       <WorkSteps />
       <Contacts />

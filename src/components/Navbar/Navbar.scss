@@ -1,18 +1,6 @@
 @import '../Layout/Layout.scss';
 
 .navbar {
-  &__body {
-    @include breakpoint(sm) {
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 1;
-      width: 100%;
-      height: 100%;
-      background: #e9e9e9;
-    }
-  }
-
   &__list {
     display: flex;
     align-items: center;
@@ -22,11 +10,6 @@
       flex-direction: column;
       align-items: start;
       color: #161515;
-      margin: 155px 0px 0px 15px;
-    }
-
-    @include breakpoint(xs) {
-      margin: 215px 0px 0px 15px;
     }
   }
 
@@ -39,7 +22,8 @@
     }
   }
 
-  &__item:not(:last-child):hover {
+  &__item:not(:last-child):hover,
+  &__item:hover {
     color: #ffb629;
 
     @include breakpoint(md) {
@@ -47,7 +31,7 @@
     }
   }
 
-  &__item:not(:last-child):hover .navbar__vector {
+  &__item_menu:hover .navbar__vector {
     filter: invert(100%);
 
     @include breakpoint(md) {
@@ -158,14 +142,6 @@
 
     @include breakpoint(sm) {
       margin-bottom: 10px;
-    }
-  }
-
-  &__item:hover {
-    color: #ffb629;
-
-    @include breakpoint(sm) {
-      color: inherit;
     }
   }
 }

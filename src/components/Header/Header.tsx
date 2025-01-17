@@ -1,10 +1,10 @@
 import { ModeAndSocialMedia } from '../ModeAndSocialMedia/ModeAndSocialMedia';
 import { PhonesAndSocialMedia } from '../PhonesAndSocialMedia/PhonesAndSocialMedia';
+import { Logo } from '../Logo/Logo';
 import { Navbar } from '../Navbar/Navbar';
 import { BurgerMenu } from '../BurgerMenu/BurgerMenu';
 import search from '../../icons/search.svg';
 import favorite from '../../icons/favorite.svg';
-import logo from '../../images/logo.svg';
 import './Header.scss';
 
 export const Header = () => {
@@ -44,7 +44,7 @@ export const Header = () => {
           <div className="bottom-header__container _container">
             <div className="bottom-header__body">
               <div className="bottom-header__logo">
-                <img src={logo} alt="logo" />
+                <Logo />
               </div>
               <div className="bottom-header__navbar">
                 <Navbar />

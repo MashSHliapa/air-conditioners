@@ -39,7 +39,9 @@ export const BurgerMenu = () => {
         <span></span>
       </div>
       <div className={`nav ${openNavbar ? 'nav__display-block' : 'nav__display-none'}`}>
-        <Navbar />
+        <div className="burger__navbar">
+          <Navbar />
+        </div>
       </div>
     </nav>
   );

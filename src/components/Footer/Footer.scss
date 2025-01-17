@@ -1,0 +1,179 @@
+@import '../Layout/Layout.scss';
+
+.footer {
+  background: #1d4f78;
+  padding: 50px 0;
+
+  @include breakpoint(xs) {
+    padding: 30px 0;
+  }
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+
+    @include breakpoint(xs) {
+      flex-direction: column;
+      gap: 50px;
+    }
+  }
+
+  &__body,
+  &__navbar .navbar__list {
+    color: #fdf9f9;
+  }
+
+  &__contacts {
+    max-width: 208px;
+
+    @include breakpoint(xs) {
+      text-align: start;
+      font-size: 14px;
+      max-width: 140px;
+    }
+  }
+
+  &__contacts .mode-links {
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+
+  &__contacts span {
+    @include breakpoint(xs) {
+      display: block;
+    }
+  }
+
+  &__contacts .phones-links__phones-icons {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  &__logo {
+    margin: 9px 0 26px;
+  }
+
+  &__logo path {
+    fill: #ffb629;
+  }
+
+  &__navbar .navbar__list {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  &__navbar .navbar__item:not(:last-child) {
+    margin: 0 0 18px 0;
+
+    @include breakpoint(xs) {
+      margin: 0 0 10px 0;
+    }
+  }
+
+  &__navbar .navbar__item {
+    @include breakpoint(md) {
+      font-size: 16px;
+    }
+    @include breakpoint(xs) {
+      font-size: 14px;
+    }
+  }
+
+  &__navbar .navbar__item:last-child .navbar__link {
+    background-color: inherit;
+    font-size: inherit;
+    padding: 0;
+  }
+
+  &__navbar .navbar__item:last-child .navbar__link:hover {
+    box-shadow: none;
+    color: #ffb629;
+
+    @include breakpoint(md) {
+      color: inherit;
+    }
+  }
+
+  &__navbar .navbar__vector {
+    filter: invert(100%);
+  }
+
+  &__navbar .navbar__item_menu:hover .navbar__vector {
+    @include breakpoint(md) {
+      filter: invert(100%);
+    }
+  }
+
+  &__navbar .navbar__info-menu {
+    position: absolute;
+    top: 35px;
+    right: -25px;
+    color: #1d4f78;
+    background-color: #ffb629;
+    min-width: 260px;
+    padding: 10px 10px 10px;
+
+    @include breakpoint(md) {
+      right: -27px;
+      min-width: 245px;
+    }
+
+    @include breakpoint(sm) {
+      min-width: 260px;
+    }
+
+    @include breakpoint(xs) {
+      top: 25px;
+      left: 0px;
+    }
+  }
+
+  &__navbar .info-menu__list {
+    @include breakpoint(xs) {
+      font-size: 14px;
+    }
+  }
+
+  &__navbar .info-menu__item:hover {
+    color: black;
+
+    @include breakpoint(md) {
+      color: inherit;
+    }
+  }
+
+  &__title {
+    color: #ffb629;
+    font-size: 20px;
+    margin-bottom: 20px;
+
+    @include breakpoint(xs) {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__data {
+    align-self: flex-end;
+    max-width: 410px;
+
+    @include breakpoint(md) {
+      max-width: 260px;
+    }
+
+    @include breakpoint(sm) {
+      display: none;
+    }
+  }
+
+  &__data .data__separator {
+    background-color: #fdf9f9;
+  }
+
+  &__data .data__text {
+    font-weight: 400;
+    font-size: 16px;
+  }
+}
