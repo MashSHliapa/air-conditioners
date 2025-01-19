@@ -1,0 +1,268 @@
+@import '../../components/Layout/Layout.scss';
+
+.how-to-choose {
+  overflow-x: hidden;
+
+  &__body {
+    display: flex;
+    gap: 50px;
+    padding: 50px 0;
+
+    @include breakpoint(md) {
+      font-size: 14px;
+      gap: 30px;
+      padding: 42px 0;
+    }
+
+    @include breakpoint(sm) {
+      gap: 10px;
+      padding: 32px 0 62px;
+    }
+
+    @include breakpoint(xs) {
+      flex-direction: column;
+    }
+  }
+
+  &__image {
+    position: relative;
+    flex: 0 1 517px;
+    max-height: 100%;
+    background: url('../../images/how_choose.jpg') 0 0 / cover no-repeat;
+
+    @include breakpoint(sm) {
+      background: none;
+    }
+
+    @include breakpoint(xs) {
+      display: none;
+    }
+  }
+
+  &__image::before {
+    @include breakpoint(sm) {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-80%);
+      width: 100vw;
+      height: 100%;
+      background: url('../../images/how_choose.jpg') 0 0 / cover no-repeat;
+      background-position: left bottom;
+    }
+  }
+
+  &__image-mobile1,
+  &__image-mobile2 {
+    display: none;
+
+    @include breakpoint(xs) {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 170px;
+    }
+  }
+
+  &__image-mobile1::after,
+  &__image-mobile2::after {
+    @include breakpoint(xs) {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100vw;
+      height: 100%;
+    }
+  }
+
+  &__image-mobile1::after {
+    background: url('../../images/how_choose_mobile1.jpg') 0 0 / cover no-repeat;
+  }
+
+  &__image-mobile2::after {
+    background: url('../../images/how_choose_mobile2.jpg') 0 0 / cover no-repeat;
+  }
+
+  &__content-box {
+    flex: 0 1 553px;
+    margin-bottom: -20px;
+
+    @include breakpoint(md) {
+      margin-bottom: -25px;
+    }
+
+    @include breakpoint(xs) {
+      margin-bottom: -20px;
+    }
+  }
+
+  &__content-box > *:not(:last-child) {
+    margin-bottom: 20px;
+
+    @include breakpoint(md) {
+      margin-bottom: 25px;
+    }
+
+    @include breakpoint(xs) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__title .title__text {
+    text-align: start;
+
+    @include breakpoint(xs) {
+      justify-self: center;
+      text-align: center;
+      max-width: 290px;
+    }
+  }
+
+  &__important-info {
+    display: flex;
+  }
+
+  &__subtitle {
+    color: red;
+    font-weight: 600;
+    font-size: 24px;
+    min-width: 190px;
+
+    @include breakpoint(md) {
+      font-size: 20px;
+      min-width: 160px;
+    }
+  }
+
+  &__separator {
+    align-self: flex-end;
+    width: 100%;
+    height: 1px;
+    background: #636466;
+  }
+
+  &__conditions > *:not(:last-child) {
+    margin-bottom: 20px;
+
+    @include breakpoint(md) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__condition {
+    position: relative;
+    text-indent: 20px;
+
+    @include breakpoint(xs) {
+      text-indent: 15px;
+    }
+  }
+
+  &__conditions-row {
+    display: flex;
+    gap: 18px;
+    margin-top: 20px;
+
+    @include breakpoint(md) {
+      gap: 10px;
+    }
+
+    @include breakpoint(sm) {
+      flex-direction: column;
+    }
+  }
+
+  &__conditions-row > *:first-child {
+    @include breakpoint(xs) {
+      max-width: 220px;
+    }
+  }
+
+  &__conditions-row > *:last-child {
+    @include breakpoint(sm) {
+      max-width: 300px;
+    }
+  }
+
+  &__conditions-column {
+    display: flex;
+    text-indent: 0px;
+    border: #636466 solid 1px;
+    padding: 8px 11px;
+  }
+}
+
+.discount-condition {
+  background: #1d4f78;
+  position: relative;
+
+  &__body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 23px 0;
+
+    @include breakpoint(sm) {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+
+  &__body .discount {
+    margin-top: 0px;
+
+    @include breakpoint(sm) {
+      width: 190px;
+      height: 240px;
+      padding: 11px 20px 11px 20px;
+    }
+  }
+
+  &__body .discount__text {
+    @include breakpoint(sm) {
+      font-size: 35px;
+    }
+  }
+
+  &__body .discount__text span {
+    @include breakpoint(sm) {
+      font-size: 23px;
+    }
+  }
+
+  &__body .discount__percent {
+    @include breakpoint(sm) {
+      font-size: 73px;
+    }
+  }
+
+  &__body .discount__condition {
+    @include breakpoint(sm) {
+      font-size: 14px;
+    }
+  }
+
+  &__text {
+    color: #fdf9f9;
+
+    @include breakpoint(md) {
+      font-size: 14px;
+    }
+  }
+}
+
+.discount-condition::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 100%;
+  z-index: -1;
+  background-color: #1d4f78;
+}

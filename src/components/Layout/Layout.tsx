@@ -1,6 +1,7 @@
 import { About } from '../../pages/About/About';
 import { Contacts } from '../../pages/Contacts/Contacts';
 import { ContactsBoxes } from '../../pages/ContactsBoxes/ContactsBoxes';
+import { HowToChoose } from '../../pages/HowToChoose/HowToChoose';
 import { Kinds } from '../../pages/Kinds/Kinds';
 import { Main } from '../../pages/Main/Main';
 import { PaymentAndDelivery } from '../../pages/PaymentAndDelivery/PaymentAndDelivery';
@@ -14,13 +15,14 @@ export function Layout() {
     <div className="layout">
       <Header />
       <Main />
-      <Footer />
+      <HowToChoose />
       <PaymentAndDelivery />
       <WorkSteps />
       <Contacts />
       <ContactsBoxes />
       <Kinds />
       <About />
+      <Footer />
     </div>
   );
 }

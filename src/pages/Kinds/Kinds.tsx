@@ -26,7 +26,7 @@ export const Kinds = () => {
           </div>
           <div className="kinds__row">
             <div className="kinds__column">
-              <h5 className="kinds__text-title">Виды по сфере использования</h5>
+              <h5 className="kinds__text-title  _triangle-pointer">Виды по сфере использования</h5>
               <h5 className="kinds__text-subtitle">
                 В зависимости от области использования различают промышленные, коммерческие и бытовые кондиционеры.
                 Основное их отличие заключается не столько в конструкции, сколько в мощности и максимальной
@@ -35,7 +35,7 @@ export const Kinds = () => {
             </div>
 
             <div className="kinds__column kinds__column_center">
-              <h5 className="kinds__text-title">Типы кондиционеров по принципу работы</h5>
+              <h5 className="kinds__text-title _triangle-pointer">Типы кондиционеров по принципу работы</h5>
               <h5 className="kinds__text-subtitle">
                 Можно классифицировать на два типа: Линейные действуют в двух режимах: включения и выключения. <br />{' '}
                 Они работают на максимальной мощности пока не нагонит нужную температуру. После этого отключаются и,
@@ -46,7 +46,7 @@ export const Kinds = () => {
             </div>
 
             <div className="kinds__column">
-              <h5 className="kinds__text-title">Разновидности кондиционеров по типу установки</h5>
+              <h5 className="kinds__text-title _triangle-pointer">Разновидности кондиционеров по типу установки</h5>
               <h5 className="kinds__text-subtitle">
                 Категория разновидностей по вариантам установки климатического оборудования считается самой обширной,
                 так как включает в себя огромное число не только разнообразных классических, но универсальных вариантов.
