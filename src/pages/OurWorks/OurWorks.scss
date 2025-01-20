@@ -1,0 +1,71 @@
+@import '../../components/Layout/Layout.scss';
+
+.our-works {
+  background-color: #e6e7ea;
+
+  &__body {
+    padding: 50px 0 28px;
+
+    @include breakpoint(md) {
+      padding: 40px 0 25px;
+    }
+
+    @include breakpoint(sm) {
+      padding: 30px 0 30px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 50px;
+
+    @include breakpoint(md) {
+      margin-bottom: 40px;
+    }
+
+    @include breakpoint(sm) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__images-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  &__image {
+    @include breakpoint(md) {
+      max-width: 350px;
+    }
+
+    @include breakpoint(sm) {
+      max-width: 200px;
+    }
+  }
+
+  &__subtitle {
+    color: #636466;
+    text-align: center;
+    font-size: 20px;
+    margin: 25px 0 15px;
+
+    @include breakpoint(xs) {
+      max-width: 300px;
+      margin: 20px auto 20px;
+    }
+  }
+
+  &__social-media .mode-links__mode {
+    display: none;
+  }
+
+  &__social-media .mode-links__icons {
+    gap: 20px;
+  }
+
+  &__social-media .mode-links__icon img {
+    width: 30px;
+  }
+}

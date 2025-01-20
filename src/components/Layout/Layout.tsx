@@ -4,6 +4,7 @@ import { ContactsBoxes } from '../../pages/ContactsBoxes/ContactsBoxes';
 import { HowToChoose } from '../../pages/HowToChoose/HowToChoose';
 import { Kinds } from '../../pages/Kinds/Kinds';
 import { Main } from '../../pages/Main/Main';
+import { OurWorks } from '../../pages/OurWorks/OurWorks';
 import { PaymentAndDelivery } from '../../pages/PaymentAndDelivery/PaymentAndDelivery';
 import { WorkSteps } from '../../pages/WorkSteps/WorkSteps';
 import { Footer } from '../Footer/Footer';
@@ -22,6 +23,7 @@ export function Layout() {
       <ContactsBoxes />
       <Kinds />
       <About />
+      <OurWorks />
       <Footer />
     </div>
   );
