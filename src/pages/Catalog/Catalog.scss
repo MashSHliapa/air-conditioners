@@ -1,0 +1,232 @@
+@import '../../components/Layout/Layout.scss';
+
+.catalog {
+  background: #e9f2f9;
+
+  &__body {
+    padding: 50px 0;
+
+    @include breakpoint(md) {
+      padding: 40px 0;
+    }
+
+    @include breakpoint(sm) {
+      padding: 30px 0;
+    }
+
+    @include breakpoint(xs) {
+      padding: 20px 0;
+    }
+  }
+
+  &__content-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 38px;
+
+    @include breakpoint(lg) {
+      justify-content: center;
+    }
+
+    @include breakpoint(sm) {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 30px;
+
+    @include breakpoint(xs) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+
+    @include breakpoint(xs) {
+      gap: 5px;
+    }
+  }
+}
+
+.filters {
+  &__body {
+    display: flex;
+    flex-direction: column;
+    min-width: 190px;
+
+    @include breakpoint(sm) {
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 500;
+    color: #636466;
+    margin-bottom: 20px;
+
+    @include breakpoint(xs) {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__filters-box {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @include breakpoint(sm) {
+      flex-direction: row;
+      gap: 20px;
+    }
+
+    @include breakpoint(xs) {
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+  }
+
+  &__filter {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    @include breakpoint(sm) {
+      align-items: center;
+    }
+
+    @include breakpoint(xs) {
+      gap: 10px;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 500;
+
+    @include breakpoint(sm) {
+      text-align: center;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+
+    @include breakpoint(sm) {
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    font-size: 14px;
+    border: #636466 1px solid;
+    border-radius: 2px;
+    padding: 2px 7px;
+    cursor: pointer;
+
+    @include breakpoint(sm) {
+      font-size: 12px;
+    }
+  }
+
+  &__item:active {
+    background-color: #1d4f78;
+    color: #e9e9e9;
+  }
+
+  &__button {
+    padding: 6px 9px;
+    margin-top: 20px;
+
+    @include breakpoint(xs) {
+      font-size: 14px;
+    }
+  }
+}
+
+.card:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.card {
+  border: #636466 1px solid;
+  max-width: 210px;
+  max-height: 243px;
+  padding: 15px;
+
+  @include breakpoint(md) {
+    max-width: 194px;
+    padding: 15px 7px;
+  }
+
+  @include breakpoint(xs) {
+    max-width: 134px;
+    padding: 10px 8px;
+  }
+
+  &__body {
+    font-weight: 600;
+  }
+
+  &__image {
+    margin-bottom: 20px;
+
+    @include breakpoint(xs) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__title {
+    min-height: 44px;
+
+    @include breakpoint(xs) {
+      font-size: 10px;
+      min-height: 34px;
+    }
+  }
+
+  &__price {
+    font-size: 14px;
+    margin: 15px 0 10px;
+
+    @include breakpoint(xs) {
+      font-size: 12px;
+      margin: 11px 0 8px;
+    }
+  }
+
+  &__button-favorite {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  &__button {
+    padding: 10px 25px;
+
+    @include breakpoint(xs) {
+      font-size: 10px;
+      padding: 6px 8px;
+    }
+  }
+
+  &__heart {
+    display: flex;
+    cursor: pointer;
+  }
+
+  &__heart svg:active {
+    fill: #1d4f78;
+  }
+}

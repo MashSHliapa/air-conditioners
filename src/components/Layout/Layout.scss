@@ -113,6 +113,10 @@ body {
   object-fit: cover;
 }
 
+._button-wrapper {
+  display: flex;
+}
+
 ._button {
   background-color: #ffb629;
   color: #1d4f78;

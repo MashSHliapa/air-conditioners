@@ -1,4 +1,5 @@
 import { About } from '../../pages/About/About';
+import { Catalog } from '../../pages/Catalog/Catalog';
 import { Contacts } from '../../pages/Contacts/Contacts';
 import { ContactsBoxes } from '../../pages/ContactsBoxes/ContactsBoxes';
 import { HowToChoose } from '../../pages/HowToChoose/HowToChoose';
@@ -16,6 +17,7 @@ export function Layout() {
     <div className="layout">
       <Header />
       <Main />
+      <Catalog />
       <HowToChoose />
       <PaymentAndDelivery />
       <WorkSteps />
