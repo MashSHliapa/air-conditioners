@@ -1,0 +1,78 @@
+@import '../Layout/Layout.scss';
+
+.card {
+  border: #636466 1px solid;
+  max-width: 210px;
+  max-height: 243px;
+  padding: 15px;
+
+  @include breakpoint(md) {
+    max-width: 194px;
+    padding: 15px 7px;
+  }
+
+  @include breakpoint(xs) {
+    max-width: 134px;
+    padding: 10px 8px;
+  }
+
+  &__body {
+    font-weight: 600;
+  }
+
+  &__image {
+    margin-bottom: 20px;
+
+    @include breakpoint(xs) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__title {
+    min-height: 44px;
+
+    @include breakpoint(xs) {
+      font-size: 10px;
+      min-height: 34px;
+    }
+  }
+
+  &__price {
+    font-size: 14px;
+    margin: 15px 0 10px;
+
+    @include breakpoint(xs) {
+      font-size: 12px;
+      margin: 11px 0 8px;
+    }
+  }
+
+  &__button-favorite {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  &__button {
+    padding: 10px 25px;
+
+    @include breakpoint(xs) {
+      font-size: 10px;
+      padding: 6px 8px;
+    }
+  }
+
+  &__heart {
+    display: flex;
+    cursor: pointer;
+  }
+
+  &__heart svg:active {
+    fill: #1d4f78;
+  }
+
+  &:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+}
