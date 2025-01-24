@@ -1,4 +1,6 @@
-import { Discount } from '../../components/Discount/Discount';
+import { NavLink } from 'react-router-dom';
+import { scrollToPage } from '../../helpers/scrollToPage';
+import { Discount } from '../Discount/Discount';
 import background from '../../images/main_photo.jpg';
 import './Main.scss';
 
@@ -15,9 +17,9 @@ export const Main = () => {
               <li className="main__menu-item">сервис</li>
             </ul>
             <div className="main__button-wrapper">
-              <a href="#" className="main__button _button">
+              <NavLink to="/" className="main__button _button" onClick={() => scrollToPage('catalog')}>
                 Каталог
-              </a>
+              </NavLink>
             </div>
           </div>
           <div className="main__discount">

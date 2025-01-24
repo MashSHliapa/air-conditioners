@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import { scrollToPage } from '../../helpers/scrollToPage';
 import vectorOpen from '../../icons/vector_open.svg';
 import vectorClose from '../../icons/vector_close.svg';
 import './Navbar.scss';
@@ -27,14 +29,14 @@ export const Navbar = () => {
       <nav className="navbar__body">
         <ul className="navbar__list">
           <li className="navbar__item">
-            <a href="#" className="navbar__link">
+            <NavLink to="/" className="navbar__link" onClick={() => scrollToPage('catalog')}>
               Каталог
-            </a>
+            </NavLink>
           </li>
           <li className="navbar__item">
-            <a href="#" className="navbar__link">
+            <NavLink to="/about" className="navbar__link" onClick={() => scrollToPage('about')}>
               О нас
-            </a>
+            </NavLink>
           </li>
           <li className="navbar__item navbar__item_menu">
             <div className="navbar__button">
@@ -49,38 +51,54 @@ export const Navbar = () => {
               <div className="navbar__info-menu info-menu">
                 <ul className="info-menu__list">
                   <li className="info-menu__item">
-                    <a href="#" className="info-menu__link">
+                    <NavLink
+                      to="/work-steps"
+                      className="info-menu__link"
+                      onClick={() => {
+                        scrollToPage('workSteps');
+                        setOpenMenu(false);
+                      }}
+                    >
                       Как мы работаем
-                    </a>
+                    </NavLink>
                   </li>
                   <li className="info-menu__item">
-                    <a href="#" className="info-menu__link">
+                    <NavLink
+                      to="/kinds"
+                      className="info-menu__link"
+                      onClick={() => {
+                        scrollToPage('kinds');
+                        setOpenMenu(false);
+                      }}
+                    >
                       Какие бывают кондиционеры
-                    </a>
+                    </NavLink>
                   </li>
                   <li className="info-menu__item">
-                    <a href="#" className="info-menu__link">
+                    <NavLink
+                      to="/how-to-choose"
+                      className="info-menu__link"
+                      onClick={() => {
+                        scrollToPage('how-to-choose');
+                        setOpenMenu(false);
+                      }}
+                    >
                       Как выбрать кондиционер
-                    </a>
+                    </NavLink>
                   </li>
                 </ul>
               </div>
             )}
           </li>
           <li className="navbar__item">
-            <a href="#" className="navbar__link">
-              Оплата и доставка
-            </a>
-          </li>
-          <li className="navbar__item">
-            <a href="#" className="navbar__link">
+            <NavLink to="/works" className="navbar__link" onClick={() => scrollToPage('our-works')}>
               Наши работы
-            </a>
+            </NavLink>
           </li>
           <li className="navbar__item">
-            <a href="#" className="navbar__link">
+            <NavLink to="/contacts" className="navbar__link" onClick={() => scrollToPage('contacts')}>
               Контакты
-            </a>
+            </NavLink>
           </li>
         </ul>
       </nav>

@@ -1,4 +1,4 @@
-import { Title } from '../../components/Title/Title';
+import { Title } from '../Title/Title';
 import cash from '../../icons/cash.svg';
 import nonCash from '../../icons/non_cash.svg';
 import delivery from '../../icons/delivery.svg';

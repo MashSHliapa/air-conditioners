@@ -1,16 +1,7 @@
-import { About } from '../../pages/About/About';
-import { CardItem } from '../../pages/CardItem/CardItem';
-import { Catalog } from '../../pages/Catalog/Catalog';
-import { Contacts } from '../../pages/Contacts/Contacts';
-import { ContactsBoxes } from '../../pages/ContactsBoxes/ContactsBoxes';
-import { HowToChoose } from '../../pages/HowToChoose/HowToChoose';
-import { Kinds } from '../../pages/Kinds/Kinds';
-import { Main } from '../../pages/Main/Main';
-import { OurWorks } from '../../pages/OurWorks/OurWorks';
-import { PaymentAndDelivery } from '../../pages/PaymentAndDelivery/PaymentAndDelivery';
-import { WorkSteps } from '../../pages/WorkSteps/WorkSteps';
-import { Footer } from '../Footer/Footer';
+import { Outlet } from 'react-router-dom';
 import { Header } from '../Header/Header';
+import { Main } from '../Main/Main';
+import { Footer } from '../Footer/Footer';
 import './Layout.scss';
 
 export function Layout() {
@@ -18,16 +9,7 @@ export function Layout() {
     <div className="layout">
       <Header />
       <Main />
-      <Catalog />
-      <CardItem />
-      <HowToChoose />
-      <PaymentAndDelivery />
-      <WorkSteps />
-      <Contacts />
-      <ContactsBoxes />
-      <Kinds />
-      <About />
-      <OurWorks />
+      <Outlet />
       <Footer />
     </div>
   );

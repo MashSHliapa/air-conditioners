@@ -1,0 +1,50 @@
+import { createBrowserRouter } from 'react-router-dom';
+import { Layout } from './components/Layout/Layout';
+import { Catalog } from './pages/Catalog/Catalog';
+import { HowToChoose } from './pages/HowToChoose/HowToChoose';
+import { PaymentAndDelivery } from './components/PaymentAndDelivery/PaymentAndDelivery';
+import { WorkSteps } from './pages/WorkSteps/WorkSteps';
+import { Contacts } from './pages/Contacts/Contacts';
+import { About } from './pages/About/About';
+import { OurWorks } from './pages/OurWorks/OurWorks';
+import { Kinds } from './pages/Kinds/Kinds';
+
+export const router = createBrowserRouter([
+  {
+    element: <Layout />,
+    children: [
+      {
+        path: '/',
+        element: <Catalog />,
+      },
+      {
+        path: '/how-to-choose',
+        element: <HowToChoose />,
+      },
+      {
+        path: '/payment-and-delivery',
+        element: <PaymentAndDelivery />,
+      },
+      {
+        path: '/work-steps',
+        element: <WorkSteps />,
+      },
+      {
+        path: '/about',
+        element: <About />,
+      },
+      {
+        path: '/contacts',
+        element: <Contacts />,
+      },
+      {
+        path: '/works',
+        element: <OurWorks />,
+      },
+      {
+        path: '/kinds',
+        element: <Kinds />,
+      },
+    ],
+  },
+]);

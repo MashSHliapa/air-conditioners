@@ -205,10 +205,16 @@
     align-items: center;
     gap: 40px;
     padding: 23px 0;
+    margin-bottom: 50px;
+
+    @include breakpoint(md) {
+      margin-bottom: 40px;
+    }
 
     @include breakpoint(sm) {
       flex-direction: column;
       gap: 30px;
+      margin-bottom: 30px;
     }
   }
 
