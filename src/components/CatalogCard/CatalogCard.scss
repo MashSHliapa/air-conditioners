@@ -47,29 +47,9 @@
     }
   }
 
-  &__button-favorite {
-    display: flex;
-    align-items: center;
+  &__button-and-favorite .button-and-favorite {
     justify-content: center;
     gap: 5px;
-  }
-
-  &__button {
-    padding: 10px 25px;
-
-    @include breakpoint(xs) {
-      font-size: 10px;
-      padding: 6px 8px;
-    }
-  }
-
-  &__heart {
-    display: flex;
-    cursor: pointer;
-  }
-
-  &__heart svg:active {
-    fill: #1d4f78;
   }
 
   &:hover {

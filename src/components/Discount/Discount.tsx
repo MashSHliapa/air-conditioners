@@ -5,7 +5,7 @@ export const Discount = () => {
       <div className="discount__text">
         скидка <span>на монтаж</span>
       </div>
-      <div className="discount__percent">50%</div>
+      <div className="discount__percent">15%</div>
       <div className="discount__condition"> * при покупке кондиционера у нас</div>
     </div>
   );

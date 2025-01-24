@@ -118,4 +118,8 @@
       display: none;
     }
   }
+
+  &__navbar .navbar__item:last-child .navbar__link:hover {
+    color: #1d4f78;
+  }
 }

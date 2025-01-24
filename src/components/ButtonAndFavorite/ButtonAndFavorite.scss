@@ -1,0 +1,24 @@
+@import '../Layout/Layout.scss';
+
+.button-and-favorite {
+  display: flex;
+  align-items: center;
+
+  &__button {
+    padding: 10px 25px;
+
+    @include breakpoint(xs) {
+      font-size: 10px;
+      padding: 6px 8px;
+    }
+  }
+
+  &__heart {
+    display: flex;
+    cursor: pointer;
+  }
+
+  &__heart svg:active {
+    fill: #1d4f78;
+  }
+}

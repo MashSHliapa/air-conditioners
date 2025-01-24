@@ -35,7 +35,7 @@ export const About = () => {
             </div>
             <div className="about__image"></div>
           </div>
-          <div className="about_menu menu">
+          <div className="about_menu menu _endless-bg">
             <div className="menu__row">
               <div className="menu__column">
                 <div className="menu__icon">

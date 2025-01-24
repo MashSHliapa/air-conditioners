@@ -1,4 +1,5 @@
 import { About } from '../../pages/About/About';
+import { CardItem } from '../../pages/CardItem/CardItem';
 import { Catalog } from '../../pages/Catalog/Catalog';
 import { Contacts } from '../../pages/Contacts/Contacts';
 import { ContactsBoxes } from '../../pages/ContactsBoxes/ContactsBoxes';
@@ -18,6 +19,7 @@ export function Layout() {
       <Header />
       <Main />
       <Catalog />
+      <CardItem />
       <HowToChoose />
       <PaymentAndDelivery />
       <WorkSteps />
