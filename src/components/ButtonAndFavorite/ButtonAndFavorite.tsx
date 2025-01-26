@@ -1,10 +1,11 @@
+import { Link } from 'react-router-dom';
 import './ButtonAndFavorite.scss';
 
-export const ButtonAndFavorite = () => {
+export const ButtonAndFavorite = ({ title, linkTo }: { title: string; linkTo?: string }) => {
   return (
     <div className="button-and-favorite">
       <div className="button-and-favorite__button-wrapper _button-wrapper">
-        <div className="button-and-favorite__button _button">ЗАКАЗАТЬ</div>
+        <div className="button-and-favorite__button _button">{linkTo && <Link to={linkTo}>{title}</Link>}</div>
       </div>
       <div className="button-and-favorite__heart">
         <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">

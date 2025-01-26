@@ -12,7 +12,7 @@ export const CatalogCard = (props: { post: ICatalogCard }) => {
         <div className="card__price">{props.post.price}</div>
       </div>
       <div className="card__button-and-favorite">
-        <ButtonAndFavorite />
+        <ButtonAndFavorite title="ПОДРОБНЕЕ" linkTo={`/selected/${props.post.id}`} />
       </div>
     </div>
   );
