@@ -53,12 +53,25 @@
   }
 
   &__favorite {
+    position: relative;
     display: flex;
     align-items: center;
+  }
 
-    @include breakpoint(sm) {
-      display: none;
-    }
+  &__favorite-count {
+    position: absolute;
+    top: -0px;
+    right: -6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8px;
+    width: 12px;
+    height: 12px;
+    background-color: #e91313;
+    color: white;
+    border-radius: 50%;
+    border: #e9e9e9 solid 1px;
   }
 }
 

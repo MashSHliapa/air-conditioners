@@ -9,6 +9,7 @@ import { About } from './pages/About/About';
 import { OurWorks } from './pages/OurWorks/OurWorks';
 import { Kinds } from './pages/Kinds/Kinds';
 import { CardItem } from './pages/CardItem/CardItem';
+import { Favorites } from './pages/Favorites/Favorites';
 
 export const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ export const router = createBrowserRouter([
       {
         path: '/selected/:postId',
         element: <CardItem />,
+      },
+      {
+        path: '/favorites',
+        element: <Favorites />,
       },
       {
         path: '/how-to-choose',

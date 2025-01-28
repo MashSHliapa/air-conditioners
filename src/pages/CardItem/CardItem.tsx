@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import { RootState } from '../../redux/store';
 import { ButtonAndFavorite } from '../../components/ButtonAndFavorite/ButtonAndFavorite';
+import { RootState } from '../../redux/store';
 import { ICardItem } from '../../types/interfaces';
 import menu1 from '../../icons/availability.svg';
 import menu2 from '../../icons/delivery_card.svg';
@@ -83,8 +83,10 @@ export const CardItem = () => {
             <div className="description__additionally additionally">
               <h5 className="additionally__subtitle">Дополнительные функции:</h5>
               <ul className="additionally__list">
-                {selectCard.add_functions.map((item) => (
-                  <li className="additionally__item">{item}</li>
+                {selectCard.add_functions.map((item, index) => (
+                  <li className="additionally__item" key={index}>
+                    {item}
+                  </li>
                 ))}
               </ul>
             </div>
@@ -100,7 +102,7 @@ export const CardItem = () => {
             <div className="description__price">от {selectCard.price}</div>
 
             <div className="description__button-and-favorite">
-              <ButtonAndFavorite title="ЗАКАЗАТЬ" linkTo={`#`} />
+              <ButtonAndFavorite title="ЗАКАЗАТЬ" linkTo={`#`} card={selectCard} />
             </div>
           </div>
         </div>

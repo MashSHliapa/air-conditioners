@@ -1,13 +1,26 @@
+import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
+import { NavLink } from 'react-router-dom';
+import { scrollToPage } from '../../helpers/scrollToPage';
 import { ModeAndSocialMedia } from '../ModeAndSocialMedia/ModeAndSocialMedia';
 import { PhonesAndSocialMedia } from '../PhonesAndSocialMedia/PhonesAndSocialMedia';
 import { Logo } from '../Logo/Logo';
 import { Navbar } from '../Navbar/Navbar';
 import { BurgerMenu } from '../BurgerMenu/BurgerMenu';
+import { RootState } from '../../redux/store';
 import search from '../../icons/search.svg';
 import favorite from '../../icons/favorite.svg';
 import './Header.scss';
 
 export const Header = () => {
+  const favoriteCards = useSelector((state: RootState) => state.favorites.data);
+
+  const [favoriteCount, setFavoriteCount] = useState(favoriteCards.length);
+
+  useEffect(() => {
+    setFavoriteCount(favoriteCards.length);
+  }, [favoriteCards]);
+
   return (
     <header className="header">
       <div className="header__body">
@@ -32,9 +45,16 @@ export const Header = () => {
                       </form>
                     </div>
                   </div>
-                  <div className="top-header__favorite">
+                  <NavLink
+                    to="/favorites"
+                    className="top-header__favorite"
+                    onClick={() => {
+                      scrollToPage('favorites');
+                    }}
+                  >
                     <img src={favorite} alt="favorite" />
-                  </div>
+                    <span className="top-header__favorite-count">{favoriteCount}</span>
+                  </NavLink>
                 </div>
               </div>
             </div>

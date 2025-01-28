@@ -1,13 +1,44 @@
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { addConditionerToFavorite, removeConditionerFromFavorite } from '../../redux/favoritesSlice';
+import { RootState } from '../../redux/store';
+import { ICardItem } from '../../types/interfaces';
 import './ButtonAndFavorite.scss';
 
-export const ButtonAndFavorite = ({ title, linkTo }: { title: string; linkTo?: string }) => {
+export const ButtonAndFavorite = ({
+  title,
+  linkTo,
+  card,
+}: {
+  title: string;
+  linkTo?: string;
+  card: { id: number };
+}) => {
+  const dispatch = useDispatch();
+
+  const isChecked: boolean = useSelector((state: RootState) => {
+    return state.favorites.data.some((item: ICardItem) => item.id === card.id);
+  });
+
+  const handleClickToogleFavorite = () => {
+    if (isChecked) {
+      dispatch(removeConditionerFromFavorite(card));
+    } else {
+      dispatch(addConditionerToFavorite(card));
+    }
+  };
+
   return (
     <div className="button-and-favorite">
       <div className="button-and-favorite__button-wrapper _button-wrapper">
         <div className="button-and-favorite__button _button">{linkTo && <Link to={linkTo}>{title}</Link>}</div>
       </div>
-      <div className="button-and-favorite__heart">
+      <div
+        className={`button-and-favorite__heart ${
+          isChecked ? 'button-and-favorite__heart-active' : 'button-and-favorite__heart'
+        }`}
+        onClick={handleClickToogleFavorite}
+      >
         <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect x="0.1" y="0.369043" width="24.8" height="24.8" rx="1.9" stroke="#636466" strokeWidth="0.2" />
           <path

@@ -6,7 +6,6 @@ import './Catalog.scss';
 
 export const Catalog = () => {
   const posts = useSelector((state: RootState) => state.catalog.data);
-  console.log(posts);
 
   const catalog = posts.map((item) => <CatalogCard key={item.id} post={item} />);
 

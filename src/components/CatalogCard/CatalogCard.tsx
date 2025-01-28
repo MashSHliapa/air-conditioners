@@ -1,5 +1,5 @@
-import { ICatalogCard } from '../../types/interfaces';
 import { ButtonAndFavorite } from '../ButtonAndFavorite/ButtonAndFavorite';
+import { ICatalogCard } from '../../types/interfaces';
 import './CatalogCard.scss';
 export const CatalogCard = (props: { post: ICatalogCard }) => {
   return (
@@ -12,7 +12,7 @@ export const CatalogCard = (props: { post: ICatalogCard }) => {
         <div className="card__price">{props.post.price}</div>
       </div>
       <div className="card__button-and-favorite">
-        <ButtonAndFavorite title="ПОДРОБНЕЕ" linkTo={`/selected/${props.post.id}`} />
+        <ButtonAndFavorite title="ПОДРОБНЕЕ" linkTo={`/selected/${props.post.id}`} card={props.post} />
       </div>
     </div>
   );
