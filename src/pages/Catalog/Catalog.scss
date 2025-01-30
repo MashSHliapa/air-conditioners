@@ -19,11 +19,14 @@
 
   &__content-box {
     display: flex;
-    justify-content: space-between;
     gap: 38px;
 
     @include breakpoint(lg) {
-      justify-content: center;
+      gap: 90px;
+    }
+
+    @include breakpoint(md) {
+      gap: 60px;
     }
 
     @include breakpoint(sm) {
@@ -43,12 +46,83 @@
   &__cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 10px;
+
+    @include breakpoint(sm) {
+      justify-content: center;
+    }
 
     @include breakpoint(xs) {
       gap: 5px;
     }
+  }
+
+  &__pagination-box {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__pagination {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  &__button-prev {
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translate(0, -50%);
+
+    @include breakpoint(xs) {
+      left: -30px;
+    }
+  }
+
+  &__button-next {
+    position: absolute;
+    right: -40px;
+    top: 50%;
+    transform: translate(0, -50%);
+
+    @include breakpoint(xs) {
+      right: -30px;
+    }
+  }
+
+  &__button-prev,
+  &__button-next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+
+    @include breakpoint(xs) {
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  &__button-prev-invisible,
+  &__button-next-invisible {
+    display: none;
+  }
+
+  &__vector {
+    @include breakpoint(xs) {
+      width: 5px;
+    }
+  }
+
+  &__error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin: 50px 0;
   }
 }
 
@@ -56,11 +130,12 @@
   &__body {
     display: flex;
     flex-direction: column;
-    min-width: 190px;
+    width: 190px;
 
     @include breakpoint(sm) {
       justify-content: center;
       align-items: center;
+      width: 100%;
     }
   }
 

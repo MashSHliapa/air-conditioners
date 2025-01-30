@@ -1,0 +1,30 @@
+@import '../../components/Layout/Layout.scss';
+
+.pagination {
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    border: #161515 solid 1px;
+    width: 30px;
+    height: 30px;
+
+    @include breakpoint(xs) {
+      font-size: 12px;
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  &__link-active {
+    background-color: #1d4f78;
+    color: white;
+  }
+}
