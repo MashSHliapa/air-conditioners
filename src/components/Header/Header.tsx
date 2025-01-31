@@ -7,8 +7,8 @@ import { PhonesAndSocialMedia } from '../PhonesAndSocialMedia/PhonesAndSocialMed
 import { Logo } from '../Logo/Logo';
 import { Navbar } from '../Navbar/Navbar';
 import { BurgerMenu } from '../BurgerMenu/BurgerMenu';
+import { SearchForm } from '../SearchForm/SearchForm';
 import { RootState } from '../../redux/store';
-import search from '../../icons/search.svg';
 import favorite from '../../icons/favorite.svg';
 import './Header.scss';
 
@@ -36,14 +36,7 @@ export const Header = () => {
                 </div>
                 <div className="top-header__search-favorite">
                   <div className="top-header__search">
-                    <div className="top-header__search-form search-form">
-                      <form action="#" className="search-form__item">
-                        <input type="text" data-value="Ошибка" className="search-form__input"></input>
-                        <button type="submit" className="search-form__button">
-                          <img src={search} alt="search" />
-                        </button>
-                      </form>
-                    </div>
+                    <SearchForm />
                   </div>
                   <NavLink
                     to="/favorites"

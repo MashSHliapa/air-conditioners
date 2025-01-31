@@ -66,20 +66,20 @@ export const Catalog = () => {
                         <li className="filters__item">
                           25 м<sup>2</sup>
                         </li>
-                        <li className="filters__item">
+                        {/* <li className="filters__item">
                           30 м<sup>2</sup>
-                        </li>
+                        </li> */}
                         <li className="filters__item">
                           35 м<sup>2</sup>
                         </li>
-                        <li className="filters__item">
+                        {/* <li className="filters__item">
                           40 м<sup>2</sup>
                         </li>
                         <li className="filters__item">
                           50 м<sup>2</sup>
-                        </li>
+                        </li> */}
                         <li className="filters__item">
-                          более 50 м<sup>2</sup>
+                          50 м<sup>2</sup> и более
                         </li>
                       </ul>
                     </li>

@@ -1,0 +1,50 @@
+@import '../../components/Layout/Layout.scss';
+
+.search-results {
+  &__body {
+    padding: 50px 0;
+
+    @include breakpoint(md) {
+      padding: 40px 0;
+    }
+
+    @include breakpoint(sm) {
+      padding: 30px 0;
+    }
+
+    @include breakpoint(xs) {
+      padding: 20px 0;
+    }
+  }
+
+  &__title .title__text {
+    text-align: start;
+
+    @include breakpoint(xs) {
+      font-size: 28px;
+    }
+  }
+
+  &__total {
+    margin: 30px 0;
+
+    @include breakpoint(sm) {
+      margin: 20px 0;
+    }
+
+    @include breakpoint(xs) {
+      margin: 10px 0;
+      font-size: 12px;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    @include breakpoint(sm) {
+      gap: 5px;
+    }
+  }
+}

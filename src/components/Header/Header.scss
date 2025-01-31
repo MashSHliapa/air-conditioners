@@ -75,29 +75,6 @@
   }
 }
 
-.search-form {
-  &__item {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    height: 21px;
-    background-color: white;
-    border-radius: 2px;
-    padding: 0px 5px;
-  }
-
-  &__input {
-    outline: none;
-    width: 118px;
-  }
-
-  &__button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-}
-
 .bottom-header {
   background: #e9e9e9;
 
