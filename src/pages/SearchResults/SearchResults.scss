@@ -1,18 +1,18 @@
-@import '../../components/Layout/Layout.scss';
+@use '../../components/Layout/Layout.scss' as layout;
 
 .search-results {
   &__body {
     padding: 50px 0;
 
-    @include breakpoint(md) {
+    @include layout.breakpoint(md) {
       padding: 40px 0;
     }
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       padding: 30px 0;
     }
 
-    @include breakpoint(xs) {
+    @include layout.breakpoint(xs) {
       padding: 20px 0;
     }
   }
@@ -21,7 +21,7 @@
     text-align: start;
     margin-bottom: 30px;
 
-    @include breakpoint(md) {
+    @include layout.breakpoint(md) {
       font-size: 28px;
       margin-bottom: 20px;
     }
@@ -30,11 +30,11 @@
   &__total {
     margin: 30px 0;
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       margin: 20px 0;
     }
 
-    @include breakpoint(xs) {
+    @include layout.breakpoint(xs) {
       margin: 10px 0;
       font-size: 12px;
     }
@@ -45,7 +45,7 @@
     flex-wrap: wrap;
     gap: 10px;
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       gap: 5px;
     }
   }

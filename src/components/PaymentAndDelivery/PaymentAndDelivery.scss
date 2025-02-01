@@ -1,22 +1,22 @@
-@import '../../components/Layout/Layout.scss';
+@use '../../components/Layout/Layout.scss' as layout;
 
 .payment-delivery {
-  @include breakpoint(sm) {
+  @include layout.breakpoint(sm) {
     background-color: #e9e9e9;
   }
 
   &__body {
     padding: 0px 0 80px;
 
-    @include breakpoint(md) {
+    @include layout.breakpoint(md) {
       padding: 20px 0 60px;
     }
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       padding: 20px 0 30px;
     }
 
-    @include breakpoint(xs) {
+    @include layout.breakpoint(xs) {
       padding: 20px 0;
     }
   }
@@ -24,7 +24,7 @@
   &__title {
     margin-bottom: 30px;
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       margin-bottom: 20px;
     }
   }
@@ -33,11 +33,11 @@
     display: flex;
     justify-content: space-around;
 
-    @include breakpoint(md) {
+    @include layout.breakpoint(md) {
       gap: 20px;
     }
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       flex-direction: column;
       align-items: center;
       gap: 30px;
@@ -50,7 +50,7 @@
     max-width: 310px;
     margin-bottom: 20px;
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       font-size: 16px;
     }
   }
@@ -66,7 +66,7 @@
   }
 
   &__icon {
-    @include breakpoint(xs) {
+    @include layout.breakpoint(xs) {
       width: 35px;
     }
   }
@@ -77,17 +77,17 @@
     font-weight: 600;
     font-size: 24px;
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       font-size: 20px;
     }
 
-    @include breakpoint(xs) {
+    @include layout.breakpoint(xs) {
       font-size: 18px;
     }
   }
 
   &__text_delivery {
-    @include breakpoint(md) {
+    @include layout.breakpoint(md) {
       max-width: 200px;
     }
   }

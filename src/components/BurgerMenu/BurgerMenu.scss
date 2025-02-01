@@ -1,4 +1,4 @@
-@import '../Layout/Layout.scss';
+@use '../Layout/Layout.scss' as layout;
 
 .nav {
   &__display-block {
@@ -71,7 +71,7 @@
   }
 
   &__navbar {
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       position: fixed;
       top: 0;
       left: 0;
@@ -85,7 +85,7 @@
   &__navbar .navbar__list {
     margin: 155px 0px 0px 15px;
 
-    @include breakpoint(xs) {
+    @include layout.breakpoint(xs) {
       margin: 215px 0px 0px 15px;
     }
   }

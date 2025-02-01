@@ -1,4 +1,4 @@
-@import '../Layout/Layout.scss';
+@use '../Layout/Layout.scss' as layout;
 
 .title {
   &__text {
@@ -7,15 +7,15 @@
     font-weight: 600;
     font-size: 60px;
 
-    @include breakpoint(md) {
+    @include layout.breakpoint(md) {
       font-size: 48px;
     }
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       font-size: 32px;
     }
 
-    @include breakpoint(xs) {
+    @include layout.breakpoint(xs) {
       font-size: 29px;
     }
   }

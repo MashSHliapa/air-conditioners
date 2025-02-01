@@ -1,4 +1,4 @@
-@import '../Layout/Layout.scss';
+@use '../Layout/Layout.scss' as layout;
 
 .discount {
   color: #ffb629;
@@ -10,21 +10,21 @@
   height: 240px;
   padding: 11px 20px 11px 20px;
 
-  @include breakpoint(sm) {
+  @include layout.breakpoint(sm) {
     width: 115px;
     height: 150px;
     margin-top: 125px;
     padding: 9px 10px 9px 9px;
   }
 
-  @include breakpoint(xs) {
+  @include layout.breakpoint(xs) {
     margin-top: 25px;
   }
 
   &__text {
     font-size: 35px;
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       font-size: 22px;
     }
   }
@@ -33,7 +33,7 @@
     display: block;
     font-size: 23px;
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       font-size: 14px;
     }
   }
@@ -41,7 +41,7 @@
   &__percent {
     font-size: 73px;
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       font-size: 45px;
     }
   }
@@ -52,7 +52,7 @@
     text-align: right;
     text-transform: lowercase;
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       font-size: 8.7px;
     }
   }

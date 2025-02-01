@@ -1,4 +1,4 @@
-@import '../../components/Layout/Layout.scss';
+@use '../../components/Layout/Layout.scss' as layout;
 
 .how-to-choose {
   overflow-x: hidden;
@@ -8,18 +8,18 @@
     gap: 50px;
     padding: 50px 0;
 
-    @include breakpoint(md) {
+    @include layout.breakpoint(md) {
       font-size: 14px;
       gap: 30px;
       padding: 42px 0;
     }
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       gap: 10px;
       padding: 32px 0 62px;
     }
 
-    @include breakpoint(xs) {
+    @include layout.breakpoint(xs) {
       flex-direction: column;
     }
   }
@@ -30,17 +30,17 @@
     max-height: 100%;
     background: url('../../images/how_choose.jpg') 0 0 / cover no-repeat;
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       background: none;
     }
 
-    @include breakpoint(xs) {
+    @include layout.breakpoint(xs) {
       display: none;
     }
   }
 
   &__image::before {
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       content: '';
       position: absolute;
       top: 0;
@@ -57,7 +57,7 @@
   &__image-mobile2 {
     display: none;
 
-    @include breakpoint(xs) {
+    @include layout.breakpoint(xs) {
       position: relative;
       display: block;
       width: 100%;
@@ -67,7 +67,7 @@
 
   &__image-mobile1::after,
   &__image-mobile2::after {
-    @include breakpoint(xs) {
+    @include layout.breakpoint(xs) {
       content: '';
       position: absolute;
       top: 0;
@@ -90,11 +90,11 @@
     flex: 0 1 553px;
     margin-bottom: -20px;
 
-    @include breakpoint(md) {
+    @include layout.breakpoint(md) {
       margin-bottom: -25px;
     }
 
-    @include breakpoint(xs) {
+    @include layout.breakpoint(xs) {
       margin-bottom: -20px;
     }
   }
@@ -102,11 +102,11 @@
   &__content-box > *:not(:last-child) {
     margin-bottom: 20px;
 
-    @include breakpoint(md) {
+    @include layout.breakpoint(md) {
       margin-bottom: 25px;
     }
 
-    @include breakpoint(xs) {
+    @include layout.breakpoint(xs) {
       margin-bottom: 20px;
     }
   }
@@ -114,7 +114,7 @@
   &__title .title__text {
     text-align: start;
 
-    @include breakpoint(xs) {
+    @include layout.breakpoint(xs) {
       justify-self: center;
       text-align: center;
       max-width: 290px;
@@ -131,7 +131,7 @@
     font-size: 24px;
     min-width: 190px;
 
-    @include breakpoint(md) {
+    @include layout.breakpoint(md) {
       font-size: 20px;
       min-width: 160px;
     }
@@ -147,7 +147,7 @@
   &__conditions > *:not(:last-child) {
     margin-bottom: 20px;
 
-    @include breakpoint(md) {
+    @include layout.breakpoint(md) {
       margin-bottom: 25px;
     }
   }
@@ -156,7 +156,7 @@
     position: relative;
     text-indent: 20px;
 
-    @include breakpoint(xs) {
+    @include layout.breakpoint(xs) {
       text-indent: 15px;
     }
   }
@@ -166,23 +166,23 @@
     gap: 18px;
     margin-top: 20px;
 
-    @include breakpoint(md) {
+    @include layout.breakpoint(md) {
       gap: 10px;
     }
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       flex-direction: column;
     }
   }
 
   &__conditions-row > *:first-child {
-    @include breakpoint(xs) {
+    @include layout.breakpoint(xs) {
       max-width: 220px;
     }
   }
 
   &__conditions-row > *:last-child {
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       max-width: 300px;
     }
   }
@@ -207,11 +207,11 @@
     padding: 23px 0;
     margin-bottom: 50px;
 
-    @include breakpoint(md) {
+    @include layout.breakpoint(md) {
       margin-bottom: 40px;
     }
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       flex-direction: column;
       gap: 30px;
       margin-bottom: 30px;
@@ -221,7 +221,7 @@
   &__body .discount {
     margin-top: 0px;
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       width: 190px;
       height: 240px;
       padding: 11px 20px 11px 20px;
@@ -229,25 +229,25 @@
   }
 
   &__body .discount__text {
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       font-size: 35px;
     }
   }
 
   &__body .discount__text span {
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       font-size: 23px;
     }
   }
 
   &__body .discount__percent {
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       font-size: 73px;
     }
   }
 
   &__body .discount__condition {
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       font-size: 14px;
     }
   }
@@ -255,7 +255,7 @@
   &__text {
     color: #fdf9f9;
 
-    @include breakpoint(md) {
+    @include layout.breakpoint(md) {
       font-size: 14px;
     }
   }

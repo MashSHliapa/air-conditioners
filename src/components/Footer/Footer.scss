@@ -1,10 +1,10 @@
-@import '../Layout/Layout.scss';
+@use '../Layout/Layout.scss' as layout;
 
 .footer {
   background: #1d4f78;
   padding: 50px 0;
 
-  @include breakpoint(xs) {
+  @include layout.breakpoint(xs) {
     padding: 30px 0;
   }
 
@@ -12,7 +12,7 @@
     display: flex;
     justify-content: space-between;
 
-    @include breakpoint(xs) {
+    @include layout.breakpoint(xs) {
       flex-direction: column;
       gap: 50px;
     }
@@ -26,7 +26,7 @@
   &__contacts {
     max-width: 208px;
 
-    @include breakpoint(xs) {
+    @include layout.breakpoint(xs) {
       text-align: start;
       font-size: 14px;
       max-width: 140px;
@@ -41,7 +41,7 @@
   }
 
   &__contacts span {
-    @include breakpoint(xs) {
+    @include layout.breakpoint(xs) {
       display: block;
     }
   }
@@ -67,16 +67,16 @@
   &__navbar .navbar__item:not(:last-child) {
     margin: 0 0 18px 0;
 
-    @include breakpoint(xs) {
+    @include layout.breakpoint(xs) {
       margin: 0 0 10px 0;
     }
   }
 
   &__navbar .navbar__item {
-    @include breakpoint(md) {
+    @include layout.breakpoint(md) {
       font-size: 16px;
     }
-    @include breakpoint(xs) {
+    @include layout.breakpoint(xs) {
       font-size: 14px;
     }
   }
@@ -91,7 +91,7 @@
     box-shadow: none;
     color: #ffb629;
 
-    @include breakpoint(md) {
+    @include layout.breakpoint(md) {
       color: inherit;
     }
   }
@@ -101,7 +101,7 @@
   }
 
   &__navbar .navbar__item_menu:hover .navbar__vector {
-    @include breakpoint(md) {
+    @include layout.breakpoint(md) {
       filter: invert(100%);
     }
   }
@@ -115,23 +115,23 @@
     min-width: 260px;
     padding: 10px 10px 10px;
 
-    @include breakpoint(md) {
+    @include layout.breakpoint(md) {
       right: -27px;
       min-width: 245px;
     }
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       min-width: 260px;
     }
 
-    @include breakpoint(xs) {
+    @include layout.breakpoint(xs) {
       top: 25px;
       left: 0px;
     }
   }
 
   &__navbar .info-menu__list {
-    @include breakpoint(xs) {
+    @include layout.breakpoint(xs) {
       font-size: 14px;
     }
   }
@@ -139,7 +139,7 @@
   &__navbar .info-menu__item:hover {
     color: black;
 
-    @include breakpoint(md) {
+    @include layout.breakpoint(md) {
       color: inherit;
     }
   }
@@ -149,7 +149,7 @@
     font-size: 20px;
     margin-bottom: 20px;
 
-    @include breakpoint(xs) {
+    @include layout.breakpoint(xs) {
       font-size: 16px;
       margin-bottom: 10px;
     }
@@ -159,11 +159,11 @@
     align-self: flex-end;
     max-width: 410px;
 
-    @include breakpoint(md) {
+    @include layout.breakpoint(md) {
       max-width: 260px;
     }
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       display: none;
     }
   }

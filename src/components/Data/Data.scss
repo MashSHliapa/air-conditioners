@@ -1,4 +1,4 @@
-@import '../Layout/Layout.scss';
+@use '../Layout/Layout.scss' as layout;
 
 .data {
   &__separator {
@@ -7,7 +7,7 @@
     width: 100%;
     margin: 0 auto 30px;
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       margin: 0 auto 15px;
     }
   }
@@ -15,11 +15,11 @@
   &__text {
     font-weight: 500;
 
-    @include breakpoint(md) {
+    @include layout.breakpoint(md) {
       font-size: 14px;
     }
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       font-size: 12px;
     }
   }

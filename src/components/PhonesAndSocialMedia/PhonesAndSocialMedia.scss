@@ -1,4 +1,4 @@
-@import '../Layout/Layout.scss';
+@use '../Layout/Layout.scss' as layout;
 
 .phones-links {
   &__phones-icons {
@@ -6,7 +6,7 @@
     align-items: center;
     gap: 15px;
 
-    @include breakpoint(xs) {
+    @include layout.breakpoint(xs) {
       gap: 10px;
     }
   }

@@ -1,4 +1,4 @@
-@import '../../components/Layout/Layout.scss';
+@use '../../components/Layout/Layout.scss' as layout;
 
 .contacts {
   position: relative;
@@ -7,11 +7,11 @@
   &__body {
     padding: 20px 0 272px 0;
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       padding: 15px 0 130px 0;
     }
 
-    @include breakpoint(xs) {
+    @include layout.breakpoint(xs) {
       padding: 15px 0 195px 0;
     }
   }
@@ -24,7 +24,7 @@
   &__title .title__text {
     font-size: 64px;
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       font-size: 32px;
     }
   }
@@ -34,7 +34,7 @@
     font-size: 32px;
     margin-top: 10px;
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       font-size: 14px;
       margin-top: 8px;
     }

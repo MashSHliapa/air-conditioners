@@ -19,7 +19,6 @@ export const Catalog = () => {
   const startIndex = lastIndex - limit;
 
   const totalPages = Math.ceil(posts.length / limit);
-  console.log(totalPages);
   const isPageValid = currentPage <= totalPages;
 
   const handleClickPrevBtn = () => {

@@ -1,11 +1,11 @@
-@import '../Layout/Layout.scss';
+@use '../Layout/Layout.scss' as layout;
 .mode-links {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 15px;
 
-  @include breakpoint(xs) {
+  @include layout.breakpoint(xs) {
     flex-direction: column;
     gap: 10px;
   }

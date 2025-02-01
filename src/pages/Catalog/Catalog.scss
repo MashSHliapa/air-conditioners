@@ -1,18 +1,18 @@
-@import '../../components/Layout/Layout.scss';
+@use '../../components/Layout/Layout.scss' as layout;
 
 .catalog {
   &__body {
     padding: 50px 0;
 
-    @include breakpoint(md) {
+    @include layout.breakpoint(md) {
       padding: 40px 0;
     }
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       padding: 30px 0;
     }
 
-    @include breakpoint(xs) {
+    @include layout.breakpoint(xs) {
       padding: 20px 0;
     }
   }
@@ -21,15 +21,15 @@
     display: flex;
     gap: 38px;
 
-    @include breakpoint(lg) {
+    @include layout.breakpoint(lg) {
       gap: 90px;
     }
 
-    @include breakpoint(md) {
+    @include layout.breakpoint(md) {
       gap: 60px;
     }
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       flex-direction: column;
       gap: 30px;
     }
@@ -38,7 +38,7 @@
   &__title {
     margin-bottom: 30px;
 
-    @include breakpoint(xs) {
+    @include layout.breakpoint(xs) {
       margin-bottom: 20px;
     }
   }
@@ -48,11 +48,11 @@
     flex-wrap: wrap;
     gap: 10px;
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       justify-content: center;
     }
 
-    @include breakpoint(xs) {
+    @include layout.breakpoint(xs) {
       gap: 5px;
     }
   }
@@ -76,7 +76,7 @@
     top: 50%;
     transform: translate(0, -50%);
 
-    @include breakpoint(xs) {
+    @include layout.breakpoint(xs) {
       left: -30px;
     }
   }
@@ -87,7 +87,7 @@
     top: 50%;
     transform: translate(0, -50%);
 
-    @include breakpoint(xs) {
+    @include layout.breakpoint(xs) {
       right: -30px;
     }
   }
@@ -100,7 +100,7 @@
     width: 30px;
     height: 30px;
 
-    @include breakpoint(xs) {
+    @include layout.breakpoint(xs) {
       width: 22px;
       height: 22px;
     }
@@ -112,7 +112,7 @@
   }
 
   &__vector {
-    @include breakpoint(xs) {
+    @include layout.breakpoint(xs) {
       width: 5px;
     }
   }
@@ -132,7 +132,7 @@
     flex-direction: column;
     width: 190px;
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       justify-content: center;
       align-items: center;
       width: 100%;
@@ -145,7 +145,7 @@
     color: #636466;
     margin-bottom: 20px;
 
-    @include breakpoint(xs) {
+    @include layout.breakpoint(xs) {
       font-size: 20px;
       margin-bottom: 15px;
     }
@@ -156,12 +156,12 @@
     flex-direction: column;
     gap: 30px;
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       flex-direction: row;
       gap: 20px;
     }
 
-    @include breakpoint(xs) {
+    @include layout.breakpoint(xs) {
       flex-direction: column;
       flex-wrap: wrap;
       gap: 15px;
@@ -173,11 +173,11 @@
     flex-direction: column;
     gap: 15px;
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       align-items: center;
     }
 
-    @include breakpoint(xs) {
+    @include layout.breakpoint(xs) {
       gap: 10px;
     }
   }
@@ -185,7 +185,7 @@
   &__subtitle {
     font-weight: 500;
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       text-align: center;
     }
   }
@@ -195,7 +195,7 @@
     flex-wrap: wrap;
     gap: 5px;
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       justify-content: center;
     }
   }
@@ -207,7 +207,7 @@
     padding: 2px 7px;
     cursor: pointer;
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       font-size: 12px;
     }
   }
@@ -221,7 +221,7 @@
     padding: 6px 9px;
     margin-top: 20px;
 
-    @include breakpoint(xs) {
+    @include layout.breakpoint(xs) {
       font-size: 14px;
     }
   }

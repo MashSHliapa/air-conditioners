@@ -1,4 +1,4 @@
-@import '../Layout/Layout.scss';
+@use '../Layout/Layout.scss' as layout;
 
 .top-header {
   position: relative;
@@ -12,7 +12,7 @@
     align-items: center;
     padding: 14px 0;
 
-    @include breakpoint(md) {
+    @include layout.breakpoint(md) {
       flex-wrap: wrap;
       justify-content: center;
       column-gap: 60px;
@@ -21,17 +21,17 @@
       padding: 14px 0;
     }
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       row-gap: 10px;
     }
 
-    @include breakpoint(xs) {
+    @include layout.breakpoint(xs) {
       flex-direction: column;
     }
   }
 
   &__part1 .mode-links__mode {
-    @include breakpoint(xs) {
+    @include layout.breakpoint(xs) {
       max-width: 155px;
       text-align: center;
     }
@@ -40,7 +40,7 @@
   &__part2 {
     display: flex;
     gap: 15px;
-    @include breakpoint(xs) {
+    @include layout.breakpoint(xs) {
       flex-direction: column;
       align-items: center;
       gap: 10px;
@@ -84,13 +84,13 @@
     align-items: center;
     padding: 27px 0;
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       padding: 24px 0;
     }
   }
 
   &__logo {
-    @include breakpoint(md) {
+    @include layout.breakpoint(md) {
       max-width: 80px;
     }
   }
@@ -98,13 +98,13 @@
   &__burger {
     display: none;
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       display: block;
     }
   }
 
   &__navbar {
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       display: none;
     }
   }

@@ -1,4 +1,4 @@
-@import '../../components/Layout/Layout.scss';
+@use '../../components/Layout/Layout.scss' as layout;
 
 .pagination {
   &__list {
@@ -16,7 +16,7 @@
     width: 30px;
     height: 30px;
 
-    @include breakpoint(xs) {
+    @include layout.breakpoint(xs) {
       font-size: 12px;
       width: 22px;
       height: 22px;

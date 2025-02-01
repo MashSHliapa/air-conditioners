@@ -1,4 +1,4 @@
-@import '../Layout/Layout.scss';
+@use '../Layout/Layout.scss' as layout;
 
 .navbar {
   &__list {
@@ -6,7 +6,7 @@
     align-items: center;
     color: #1d4f78;
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       flex-direction: column;
       align-items: start;
       color: #161515;
@@ -16,7 +16,7 @@
   &__item:not(:last-child) {
     margin-right: 18px;
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       margin-right: 0px;
       margin-bottom: 20px;
     }
@@ -26,7 +26,7 @@
   &__item:hover {
     color: #ffb629;
 
-    @include breakpoint(md) {
+    @include layout.breakpoint(md) {
       color: inherit;
     }
   }
@@ -34,17 +34,17 @@
   &__item_menu:hover .navbar__vector {
     filter: invert(100%);
 
-    @include breakpoint(md) {
+    @include layout.breakpoint(md) {
       filter: none;
     }
   }
 
   &__item {
-    @include breakpoint(md) {
+    @include layout.breakpoint(md) {
       font-size: 14px;
     }
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       font-size: 16px;
     }
   }
@@ -54,11 +54,11 @@
     font-size: 14px;
     padding: 5px 17px;
 
-    @include breakpoint(md) {
+    @include layout.breakpoint(md) {
       font-size: 12px;
     }
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       background: none;
       font-size: inherit;
       padding: 0;
@@ -68,7 +68,7 @@
   &__item:last-child :hover {
     box-shadow: inset 0px 1px 5px rgb(109, 105, 105);
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       box-shadow: none;
     }
   }
@@ -87,7 +87,7 @@
     justify-content: space-around;
     gap: 5px;
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       justify-content: start;
     }
   }
@@ -99,11 +99,11 @@
     width: 12px;
     margin-top: 2px;
 
-    @include breakpoint(md) {
+    @include layout.breakpoint(md) {
       margin-top: 0px;
     }
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       margin-top: 2px;
     }
   }
@@ -119,7 +119,7 @@
   padding: 20px 15px;
   min-width: 152px;
 
-  @include breakpoint(sm) {
+  @include layout.breakpoint(sm) {
     position: static;
     background-color: inherit;
     color: #1d4f78;
@@ -132,7 +132,7 @@
     min-width: 132px;
     font-size: 14px;
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       font-size: 16px;
     }
   }
@@ -140,7 +140,7 @@
   &__item:not(:last-child) {
     margin-bottom: 15px;
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       margin-bottom: 10px;
     }
   }

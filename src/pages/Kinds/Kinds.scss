@@ -1,14 +1,14 @@
-@import '../../components/Layout/Layout.scss';
+@use '../../components/Layout/Layout.scss' as layout;
 
 .kinds {
   &__body {
     padding: 50px 0;
 
-    @include breakpoint(md) {
+    @include layout.breakpoint(md) {
       padding: 40px 0;
     }
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       padding: 20px 0;
     }
   }
@@ -16,21 +16,21 @@
   &__body > :not(:last-child) {
     margin-bottom: 30px;
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       margin-bottom: 20px;
     }
   }
 
   &__title .title__text {
-    @include breakpoint(lg) {
+    @include layout.breakpoint(lg) {
       font-size: 45px;
     }
 
-    @include breakpoint(md) {
+    @include layout.breakpoint(md) {
       font-size: 40px;
     }
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       font-size: 30px;
     }
   }
@@ -39,7 +39,7 @@
     display: flex;
     justify-content: center;
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       flex-direction: column;
       align-items: center;
     }
@@ -51,11 +51,11 @@
     color: #636466;
     font-weight: 600;
 
-    @include breakpoint(md) {
+    @include layout.breakpoint(md) {
       font-size: 20px;
     }
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       font-size: 18px;
     }
   }
@@ -63,7 +63,7 @@
   &__subtitle:not(:first-child) {
     padding-left: 17px;
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       padding-left: 0;
     }
   }
@@ -71,7 +71,7 @@
   &__subtitle:not(:last-child) {
     padding-right: 17px;
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       padding-right: 0;
     }
   }
@@ -86,11 +86,11 @@
     transform: translateY(-50%);
     background-color: #636466;
 
-    @include breakpoint(md) {
+    @include layout.breakpoint(md) {
       height: 20px;
     }
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       display: none;
     }
   }
@@ -103,11 +103,11 @@
     display: flex;
     gap: 45px;
 
-    @include breakpoint(md) {
+    @include layout.breakpoint(md) {
       gap: 20px;
     }
 
-    @include breakpoint(sm) {
+    @include layout.breakpoint(sm) {
       flex-direction: column;
       gap: 45px;
     }
@@ -129,7 +129,7 @@
 
   &__text-title,
   &__text-subtitle {
-    @include breakpoint(md) {
+    @include layout.breakpoint(md) {
       font-size: 14px;
     }
   }
