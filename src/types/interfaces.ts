@@ -34,3 +34,10 @@ export interface ICardItem {
   manufacturer: string;
   importer: string;
 }
+
+export interface INothingFound {
+  image: string;
+  subtitle: string;
+  text: string;
+  imgActive?: string;
+}

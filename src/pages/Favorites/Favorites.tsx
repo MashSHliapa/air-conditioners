@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
-import { NavLink } from 'react-router-dom';
 import { Title } from '../../components/Title/Title';
 import { CatalogCard } from '../../components/CatalogCard/CatalogCard';
+import { NothingFound } from '../../components/NothingFound/NothingFound';
 import { RootState } from '../../redux/store';
 import { ICardItem } from '../../types/interfaces';
 import image from '../../images/favorites_heart.png';
@@ -23,23 +23,12 @@ export const Favorites = () => {
           {favoriteCards.length > 0 ? (
             <div className="favorites__favorites-cards">{favoriteCards}</div>
           ) : (
-            <div className="favorites__content-box">
-              <div className="favorites__image">
-                <img src={image} alt="image" />
-              </div>
-              <h4 className="favorites__subtitle">В избранном пусто</h4>
-              <div className="favorites__announcement">
-                <h4 className="favorites__text">Добавляйте товары с помощью</h4>
-                <div className="favorites__text-img">
-                  <img src={heartActive} alt="heart" />
-                </div>
-              </div>
-              <div className="favorites__button-wrapper _button-wrapper ">
-                <NavLink to="/" className="favorites__button _button">
-                  КАТАЛОГ
-                </NavLink>
-              </div>
-            </div>
+            <NothingFound
+              image={image}
+              imgActive={heartActive}
+              subtitle="В избранном пусто"
+              text="Добавляйте товары с помощью"
+            />
           )}
         </div>
       </div>
