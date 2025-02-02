@@ -16,12 +16,12 @@ export const Favorites = () => {
   return (
     <div className="favorites">
       <div className="favorites__container _container">
-        <div className="favorites__body">
-          <div className="favorites__title">
+        <div className="favorites__body _body-cards">
+          <div className="favorites__title _title-start">
             <Title>Избранное</Title>
           </div>
           {favoriteCards.length > 0 ? (
-            <div className="favorites__favorites-cards">{favoriteCards}</div>
+            <div className="favorites__cards">{favoriteCards}</div>
           ) : (
             <NothingFound
               image={image}

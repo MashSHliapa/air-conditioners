@@ -1,34 +1,13 @@
 @use '../../components/Layout/Layout.scss' as layout;
 
 .favorites {
-  &__body {
-    padding: 50px 0;
-
-    @include layout.breakpoint(md) {
-      padding: 40px 0;
-    }
-
-    @include layout.breakpoint(sm) {
-      padding: 30px 0;
-    }
-
-    @include layout.breakpoint(xs) {
-      padding: 20px 0;
-    }
-  }
-
-  &__title .title__text {
-    text-align: start;
-    margin-bottom: 30px;
-
-    @include layout.breakpoint(md) {
-      margin-bottom: 20px;
-    }
-  }
-
-  &__favorites-cards {
+  &__cards {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+
+    @include layout.breakpoint(xs) {
+      gap: 5px;
+    }
   }
 }

@@ -99,7 +99,7 @@ export const CardItem = () => {
               <li className="manufacturer__item">Импортер в РБ: {selectCard.importer}</li>
             </ul>
             <h5 className="description__guarantee">Гарантия: {selectCard.guarantee} мес.</h5>
-            <div className="description__price">от {selectCard.price}</div>
+            <div className="description__price">от {selectCard.price} BYN</div>
 
             <div className="description__button-and-favorite">
               <ButtonAndFavorite title="ЗАКАЗАТЬ" linkTo={`#`} card={selectCard} />

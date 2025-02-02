@@ -1,59 +1,11 @@
 @use '../../components/Layout/Layout.scss' as layout;
 
 .catalog {
-  &__body {
-    padding: 50px 0;
-
-    @include layout.breakpoint(md) {
-      padding: 40px 0;
-    }
-
-    @include layout.breakpoint(sm) {
-      padding: 30px 0;
-    }
-
-    @include layout.breakpoint(xs) {
-      padding: 20px 0;
-    }
-  }
-
-  &__content-box {
-    display: flex;
-    gap: 38px;
-
-    @include layout.breakpoint(lg) {
-      gap: 90px;
-    }
-
-    @include layout.breakpoint(md) {
-      gap: 60px;
-    }
-
-    @include layout.breakpoint(sm) {
-      flex-direction: column;
-      gap: 30px;
-    }
-  }
-
   &__title {
     margin-bottom: 30px;
 
     @include layout.breakpoint(xs) {
       margin-bottom: 20px;
-    }
-  }
-
-  &__cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-
-    @include layout.breakpoint(sm) {
-      justify-content: center;
-    }
-
-    @include layout.breakpoint(xs) {
-      gap: 5px;
     }
   }
 
@@ -123,106 +75,5 @@
     align-items: center;
     gap: 30px;
     margin: 50px 0;
-  }
-}
-
-.filters {
-  &__body {
-    display: flex;
-    flex-direction: column;
-    width: 190px;
-
-    @include layout.breakpoint(sm) {
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-    }
-  }
-
-  &__title {
-    font-size: 24px;
-    font-weight: 500;
-    color: #636466;
-    margin-bottom: 20px;
-
-    @include layout.breakpoint(xs) {
-      font-size: 20px;
-      margin-bottom: 15px;
-    }
-  }
-
-  &__filters-box {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-
-    @include layout.breakpoint(sm) {
-      flex-direction: row;
-      gap: 20px;
-    }
-
-    @include layout.breakpoint(xs) {
-      flex-direction: column;
-      flex-wrap: wrap;
-      gap: 15px;
-    }
-  }
-
-  &__filter {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-
-    @include layout.breakpoint(sm) {
-      align-items: center;
-    }
-
-    @include layout.breakpoint(xs) {
-      gap: 10px;
-    }
-  }
-
-  &__subtitle {
-    font-weight: 500;
-
-    @include layout.breakpoint(sm) {
-      text-align: center;
-    }
-  }
-
-  &__list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-
-    @include layout.breakpoint(sm) {
-      justify-content: center;
-    }
-  }
-
-  &__item {
-    font-size: 14px;
-    border: #636466 1px solid;
-    border-radius: 2px;
-    padding: 2px 7px;
-    cursor: pointer;
-
-    @include layout.breakpoint(sm) {
-      font-size: 12px;
-    }
-  }
-
-  &__item:active {
-    background-color: #1d4f78;
-    color: #e9e9e9;
-  }
-
-  &__button {
-    padding: 6px 9px;
-    margin-top: 20px;
-
-    @include layout.breakpoint(xs) {
-      font-size: 14px;
-    }
   }
 }

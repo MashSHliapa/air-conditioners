@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import { scrollToPage } from '../../helpers/scrollToPage';
 import { INothingFound } from '../../types/interfaces';
 import './NothingFound.scss';
 
@@ -16,7 +17,7 @@ export const NothingFound = (props: INothingFound) => {
         </div>
       </div>
       <div className="nothing-found__button-wrapper _button-wrapper ">
-        <NavLink to="/" className="nothing-found__button _button">
+        <NavLink to="/" className="nothing-found__button _button" onClick={() => scrollToPage('catalog')}>
           КАТАЛОГ
         </NavLink>
       </div>

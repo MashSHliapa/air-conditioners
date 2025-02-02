@@ -1,9 +1,9 @@
 export interface ICatalogCard {
   id: number;
   title: string;
-  price: string;
+  price: number;
   category: string;
-  square: string;
+  square: number;
   technology: string;
   image: string;
   brand: string;
@@ -13,13 +13,13 @@ export interface ICardItem {
   id: number;
   title: string;
   category: string;
-  square: string;
+  square: number;
   technology: string;
   image: string;
   image_item: string;
   brand: string;
   guarantee: number;
-  price: string;
+  price: number;
   serviced_area?: number;
   mode?: string;
   cooling_temperature?: string;
