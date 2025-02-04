@@ -41,3 +41,7 @@ export interface INothingFound {
   text: string;
   imgActive?: string;
 }
+
+export interface ActiveFilters {
+  [key: string]: (string | number)[] | undefined;
+}
