@@ -1,0 +1,119 @@
+@use '../../components/Layout/Layout.scss' as layout;
+
+.our-services {
+  &__body {
+    padding: 50px 0;
+
+    @include layout.breakpoint(md) {
+      padding: 30px 0;
+    }
+
+    @include layout.breakpoint(xs) {
+      padding: 20px 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: 30px;
+
+    @include layout.breakpoint(xs) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__gallery {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+
+    @include layout.breakpoint(md) {
+      gap: 30px;
+    }
+
+    @include layout.breakpoint(sm) {
+      flex-wrap: wrap;
+      margin: 0 auto;
+      max-width: 546px;
+    }
+
+    @include layout.breakpoint(xs) {
+      gap: 20px;
+      max-width: 248px;
+    }
+  }
+
+  &__gallery > :last-child {
+    @include layout.breakpoint(sm) {
+      flex: 0 1 100%;
+    }
+  }
+
+  &__card {
+    flex: 0 1 330px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    border: #636466 solid 1px;
+    padding: 20px;
+
+    @include layout.breakpoint(md) {
+      flex: 0 1 248px;
+      gap: 20px;
+      padding: 15px;
+    }
+  }
+
+  &__text {
+    color: #1d4f78;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1;
+  }
+
+  &__image {
+    position: relative;
+    width: 100%;
+    padding: 0 0 108% 0;
+  }
+
+  &__image_3 {
+    @include layout.breakpoint(sm) {
+      padding: 0 0 45% 0;
+    }
+
+    @include layout.breakpoint(xs) {
+      padding: 0 0 108% 0;
+    }
+  }
+
+  &__image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    @include layout.breakpoint(sm) {
+      max-height: 232px;
+    }
+  }
+
+  &__button {
+    font-size: 20px;
+    line-height: 1.5;
+    padding: 9px 39px;
+
+    @include layout.breakpoint(md) {
+      font-size: 16px;
+      padding: 10px 25px;
+    }
+
+    @include layout.breakpoint(sm) {
+      font-size: 12px;
+      padding: 7px 13px;
+    }
+  }
+}

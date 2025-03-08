@@ -34,6 +34,11 @@ export const Navbar = () => {
             </NavLink>
           </li>
           <li className="navbar__item">
+            <NavLink to="/services" className="navbar__link" onClick={() => scrollToPage('about')}>
+              Услуги
+            </NavLink>
+          </li>
+          <li className="navbar__item">
             <NavLink to="/about" className="navbar__link" onClick={() => scrollToPage('about')}>
               О нас
             </NavLink>
