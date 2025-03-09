@@ -1,4 +1,6 @@
+import { NavLink } from 'react-router-dom';
 import { Title } from '../../components/Title/Title';
+import { scrollToPage } from '../../helpers/scrollToPage';
 import services1 from '../../images/services/services1.jpg';
 import services2 from '../../images/services/services2.jpg';
 import services3 from '../../images/services/services3.jpg';
@@ -37,7 +39,9 @@ export const OurServices = () => {
                 <img src={services3} alt="services1" />
               </div>
               <div className="our-services__button-wrapper _button-wrapper">
-                <h4 className="our-services__button _button">Подробнее</h4>
+                <NavLink to="/repair" className="our-services__button _button" onClick={() => scrollToPage('repair')}>
+                  Подробнее
+                </NavLink>
               </div>
             </div>
           </div>

@@ -30,7 +30,7 @@ export const HowToChoose = () => {
               других.
             </h5>
             <ul className="how-to-choose__conditions">
-              <li className="how-to-choose__condition _triangle-pointer">
+              <li className="how-to-choose__condition _triangle-pointer _text-indent">
                 Следующий шаг определить на сколько чувствительная должна быть техника:
                 <ul className="how-to-choose__conditions-row">
                   <li className="how-to-choose__conditions-column">
@@ -43,16 +43,16 @@ export const HowToChoose = () => {
                   </li>
                 </ul>
               </li>
-              <li className="how-to-choose__condition _triangle-pointer">
+              <li className="how-to-choose__condition _triangle-pointer _text-indent">
                 Нужно решить на сколько важна для Вас громкость работы кондиционера. Инверторные кондиционеры работают
                 тише. Еще одним плюсом этих кондиционеров, по сравнению с кондиционерами on/off, является меньшее
                 энергопотребление.
               </li>
-              <li className="how-to-choose__condition _triangle-pointer">
+              <li className="how-to-choose__condition _triangle-pointer _text-indent">
                 Есть еще много дополнительных функций, таких как Wi-Fi (по дороге с работы можно задать нужную
                 температуру в доме к вашему приезду), различные фильтры очистки и воздуха.
               </li>
-              <li className="how-to-choose__condition _triangle-pointer">
+              <li className="how-to-choose__condition _triangle-pointer _text-indent">
                 Когда с этими параметрами определились, нужно рассчитать мощность кондиционера, она зависит от площади
                 помещения, которое будет охлаждаться или обогреваться. Если в помещении много окон на солнечной стороне,
                 или квартира находится на верхнем этаже и крыша сильно прогревается, то лучше взять кондиционер чуть

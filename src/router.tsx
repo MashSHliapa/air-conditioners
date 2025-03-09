@@ -12,6 +12,7 @@ import { CardItem } from './pages/CardItem/CardItem';
 import { Favorites } from './pages/Favorites/Favorites';
 import { SearchResults } from './pages/SearchResults/SearchResults';
 import { OurServices } from './pages/OurServices/OurServices';
+import { Repair } from './pages/Repair/Repair';
 
 export const router = createBrowserRouter([
   {
@@ -64,6 +65,10 @@ export const router = createBrowserRouter([
       {
         path: '/services',
         element: <OurServices />,
+      },
+      {
+        path: '/repair',
+        element: <Repair/>,
       },
       {
         path: '/kinds',

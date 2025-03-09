@@ -1,0 +1,147 @@
+@use '../../components/Layout/Layout.scss' as layout;
+
+.repair {
+  &__container {
+    max-width: 1100px;
+  }
+
+  &__body {
+    padding: 30px 0 50px;
+
+    @include layout.breakpoint(md) {
+      padding: 30px 0 30px;
+    }
+
+    @include layout.breakpoint(xs) {
+      padding: 20px 0 20px;
+    }
+  }
+
+  &__body > :not(:last-child) {
+    margin-bottom: 30px;
+
+    @include layout.breakpoint(xs) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__repair-content {
+    display: flex;
+    gap: 40px;
+
+    @include layout.breakpoint(sm) {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  &__description {
+    flex: 0 1 495px;
+
+    @include layout.breakpoint(sm) {
+      flex: 0 1 100%;
+    }
+  }
+
+  &__description > :not(:last-child) {
+    margin-bottom: 30px;
+
+    @include layout.breakpoint(md) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__title .title__text {
+    text-align: start;
+
+    @include layout.breakpoint(sm) {
+      text-align: center;
+    }
+  }
+
+  &__conditions > :not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &__condition {
+    @include layout.breakpoint(xs) {
+      font-size: 14px;
+    }
+  }
+
+  &__text {
+    color: #636466;
+
+    @include layout.breakpoint(xs) {
+      font-size: 14px;
+    }
+  }
+
+  &__image {
+    position: relative;
+    background: url('../../images/services/services3.jpg') 50% / cover no-repeat;
+    flex: 0 1 565px;
+
+    @include layout.breakpoint(md) {
+      flex: 0 1 427px;
+    }
+  }
+
+  &__order {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__order-text {
+    color: #1d4f78;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+
+    @include layout.breakpoint(md) {
+      font-size: 20px;
+    }
+
+    @include layout.breakpoint(xs) {
+      font-size: 16px;
+    }
+  }
+
+  &__order-text span {
+    font-weight: 400;
+  }
+
+  &__button {
+    line-height: 1.5;
+    font-size: 20px;
+    padding: 9px 26px;
+
+    @include layout.breakpoint(md) {
+      padding: 7px 16px;
+    }
+
+    @include layout.breakpoint(xs) {
+      font-size: 12px;
+      padding: 7px 27px;
+    }
+  }
+}
+
+.return {
+  &__body {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+  }
+
+  &__arrow {
+    display: flex;
+  }
+
+  &__text {
+    color: #636466;
+    line-height: 1;
+  }
+}
