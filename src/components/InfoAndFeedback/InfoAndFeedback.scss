@@ -1,0 +1,41 @@
+@use '../Layout/Layout.scss' as layout;
+
+.infoAndFeedback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  &__text {
+    color: #1d4f78;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+
+    @include layout.breakpoint(md) {
+      font-size: 20px;
+    }
+
+    @include layout.breakpoint(xs) {
+      font-size: 16px;
+    }
+  }
+
+  &__text span {
+    font-weight: 400;
+  }
+
+  &__button {
+    font-size: 20px;
+    padding: 9px 26px;
+
+    @include layout.breakpoint(md) {
+      padding: 7px 16px;
+    }
+
+    @include layout.breakpoint(xs) {
+      font-size: 12px;
+      padding: 7px 27px;
+    }
+  }
+}

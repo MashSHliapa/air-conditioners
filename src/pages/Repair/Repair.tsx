@@ -1,21 +1,15 @@
-import { NavLink } from 'react-router-dom';
+import { InfoAndFeedback } from '../../components/InfoAndFeedback/InfoAndFeedback';
+import { Return } from '../../components/Return/Return';
 import { Title } from '../../components/Title/Title';
-import arrow from '../../icons/return_arrow.svg';
 import './Repair.scss';
+
 export const Repair = () => {
   return (
     <div className="repair" id="repair">
       <div className="repair__container _container">
         <div className="repair__body">
           <div className="repair__return return">
-            <NavLink to="/services" className="return">
-              <div className="return__body">
-                <div className="return__arrow">
-                  <img src={arrow} alt="arrow" />
-                </div>
-                <div className="return__text">назад</div>
-              </div>
-            </NavLink>
+            <Return />
           </div>
           <div className="repair__repair-content">
             <div className="repair__description">
@@ -44,22 +38,7 @@ export const Repair = () => {
             </div>
             <div className="repair__image"></div>
           </div>
-          <div className="repair__order">
-            <div className="repair__order-text">
-              Нужен ремонт? <br /> Позвоните нам{' '}
-              <span className="note">
-                <a href="tel:+375255106277">+375 25 510 62 77</a>
-              </span>
-              ;{' '}
-              <span className="note">
-                <a href="tel:+375257886106">+375 25 77 86 106</a>
-              </span>
-              <br /> или оставьте заявку и мы с Вами свяжемся
-            </div>
-            <div className="repair__button _button-wrapper">
-              <div className="repair__button _button">Оставить заявку</div>
-            </div>
-          </div>
+          <InfoAndFeedback>Нужен ремонт?</InfoAndFeedback>
         </div>
       </div>
     </div>

@@ -1,0 +1,17 @@
+.return {
+  &__body {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+  }
+
+  &__arrow {
+    display: flex;
+    margin-top: 1px;
+  }
+
+  &__text {
+    color: #636466;
+    line-height: 0.9;
+  }
+}
