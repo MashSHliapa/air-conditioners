@@ -13,6 +13,7 @@ import { Favorites } from './pages/Favorites/Favorites';
 import { SearchResults } from './pages/SearchResults/SearchResults';
 import { OurServices } from './pages/OurServices/OurServices';
 import { Repair } from './pages/Repair/Repair';
+import { InstallationAndRemoval } from './pages/InstallationAndRemoval/InstallationAndRemoval';
 
 export const router = createBrowserRouter([
   {
@@ -67,8 +68,12 @@ export const router = createBrowserRouter([
         element: <OurServices />,
       },
       {
+        path: '/installation-and-removal',
+        element: <InstallationAndRemoval />,
+      },
+      {
         path: '/repair',
-        element: <Repair/>,
+        element: <Repair />,
       },
       {
         path: '/kinds',

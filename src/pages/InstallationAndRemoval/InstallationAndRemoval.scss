@@ -1,0 +1,173 @@
+@use '../../components/Layout/Layout.scss' as layout;
+
+.installation-and-removal {
+  &__container {
+    max-width: 1100px;
+  }
+
+  &__body {
+    text-align: center;
+    padding: 30px 0 50px;
+
+    @include layout.breakpoint(md) {
+      padding: 30px 0;
+    }
+
+    @include layout.breakpoint(xs) {
+      padding: 20px 0;
+    }
+  }
+
+  &__body > :not(:last-child) {
+    margin-bottom: 30px;
+
+    @include layout.breakpoint(xs) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__subtitle,
+  &__card-subtitle {
+    font-weight: 500;
+  }
+
+  &__subtitle {
+    font-size: 20px;
+
+    @include layout.breakpoint(md) {
+      font-size: 16px;
+    }
+  }
+
+  &__gallery {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 43px;
+
+    @include layout.breakpoint(md) {
+      gap: 30px;
+    }
+
+    @include layout.breakpoint(sm) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__card > :not(:last-child) {
+    margin-bottom: 20px;
+
+    @include layout.breakpoint(md) {
+      margin-bottom: 17px;
+    }
+  }
+
+  &__card,
+  &__guarantee {
+    font-weight: 600;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #1d4f78;
+    border: #636466 1px solid;
+    width: 330px;
+    padding: 20px;
+
+    @include layout.breakpoint(md) {
+      padding: 16px 17px;
+    }
+
+    @include layout.breakpoint(sm) {
+      width: 281px;
+    }
+
+    @include layout.breakpoint(xs) {
+      padding: 22px 17px;
+    }
+  }
+
+  &__card-title {
+    font-size: 24px;
+
+    @include layout.breakpoint(md) {
+      font-size: 20px;
+    }
+  }
+
+  &__card-price-vector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    @include layout.breakpoint(md) {
+      gap: 13px;
+    }
+  }
+
+  &__card-price {
+    font-size: 24px;
+
+    @include layout.breakpoint(md) {
+      font-size: 20px;
+    }
+  }
+
+  &__card-vector {
+    cursor: pointer;
+  }
+
+  &__card-vector img {
+    display: block;
+    @include layout.breakpoint(md) {
+      max-width: 20px;
+      max-height: 20px;
+    }
+  }
+
+  &__card-subtitle {
+    color: #000000;
+  }
+
+  &__card-button {
+    font-size: 20px;
+    padding: 9px 56px;
+
+    @include layout.breakpoint(md) {
+      padding: 10px 39px;
+      font-size: 16px;
+    }
+
+    @include layout.breakpoint(xs) {
+      padding: 7px 24px;
+      font-size: 12px;
+    }
+  }
+
+  &__guarantee {
+    font-size: 24px;
+
+    @include layout.breakpoint(md) {
+      font-size: 20px;
+    }
+
+    @include layout.breakpoint(xs) {
+      font-size: 16px;
+    }
+  }
+
+  &__home {
+    font-size: 20px;
+
+    @include layout.breakpoint(md) {
+      font-size: 16px;
+    }
+
+    @include layout.breakpoint(xs) {
+      font-size: 14px;
+    }
+  }
+}

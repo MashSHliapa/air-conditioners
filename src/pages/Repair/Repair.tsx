@@ -8,7 +8,7 @@ export const Repair = () => {
     <div className="repair" id="repair">
       <div className="repair__container _container">
         <div className="repair__body">
-          <div className="repair__return return">
+          <div className="repair__return">
             <Return />
           </div>
           <div className="repair__repair-content">

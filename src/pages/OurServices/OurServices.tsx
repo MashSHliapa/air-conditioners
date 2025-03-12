@@ -21,7 +21,7 @@ export const OurServices = () => {
                 <img src={services1} alt="services1" />
               </div>
               <div className="our-services__button-wrapper _button-wrapper">
-                <h4 className="our-services__button _button">Подробнее</h4>
+                <NavLink to="/installation-and-removal" className="our-services__button _button" onClick={() => scrollToPage('installation-and-removal')}>Подробнее</NavLink>
               </div>
             </div>
             <div className="our-services__card">
