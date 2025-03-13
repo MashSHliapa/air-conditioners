@@ -30,13 +30,13 @@ export const InstallationAndRemoval = () => {
     <div className="installation-and-removal">
       <div className="installation-and-removal__container _container">
         <div className="installation-and-removal__body">
-          <div className="repair__return">
+          <div className="installation-and-removal__return">
             <Return />
           </div>
           <div className="installation-and-removal__title">
             <Title>Установка/Демонтаж</Title>
           </div>
-          <div className="installation-and-removal__subtitle">
+          <h4 className="installation-and-removal__subtitle">
             Мы производим как монтаж так и демонтаж кондиционеров.
             <br />
             Работы производятся специалистами с большим опытом. Используя качественные материалы. Мы работаем без пыли и
@@ -48,7 +48,7 @@ export const InstallationAndRemoval = () => {
             <b>
               Эта услуга оплачивается отдельно - от <span className="note"> 200 руб.</span>
             </b>
-          </div>
+          </h4>
           <div className="installation-and-removal__gallery">
             <div className="installation-and-removal__card">
               <h4 className="installation-and-removal__card-title">Установка кондиционера купленного у нас</h4>

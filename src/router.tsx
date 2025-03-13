@@ -14,6 +14,7 @@ import { SearchResults } from './pages/SearchResults/SearchResults';
 import { OurServices } from './pages/OurServices/OurServices';
 import { Repair } from './pages/Repair/Repair';
 import { InstallationAndRemoval } from './pages/InstallationAndRemoval/InstallationAndRemoval';
+import { Maintenance } from './pages/Maintenance/Maintenance';
 
 export const router = createBrowserRouter([
   {
@@ -70,6 +71,10 @@ export const router = createBrowserRouter([
       {
         path: '/installation-and-removal',
         element: <InstallationAndRemoval />,
+      },
+      {
+        path: '/maintenance',
+        element: <Maintenance />,
       },
       {
         path: '/repair',

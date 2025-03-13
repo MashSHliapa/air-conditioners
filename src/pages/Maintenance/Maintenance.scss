@@ -1,0 +1,203 @@
+@use '../../components/Layout/Layout.scss' as layout;
+
+.maintenance {
+  &__container {
+    max-width: 1090px;
+  }
+
+  &__body {
+    padding: 30px 0 50px;
+
+    @include layout.breakpoint(sm) {
+      padding: 30px 0;
+    }
+
+    @include layout.breakpoint(xs) {
+      padding: 20px 0;
+    }
+  }
+
+  &__body > :not(:last-child) {
+    margin-bottom: 30px;
+
+    @include layout.breakpoint(xs) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    align-items: start;
+    gap: 40px;
+
+    @include layout.breakpoint(sm) {
+      flex-direction: column;
+    }
+
+    @include layout.breakpoint(xs) {
+      gap: 20px;
+    }
+  }
+
+  &__card1 > :not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &__card1 {
+    border: #636466 1px solid;
+    max-width: 705px;
+    padding: 20px;
+  }
+
+  &__card-title {
+    color: #1d4f78;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+
+    @include layout.breakpoint(xs) {
+      font-size: 20px;
+    }
+  }
+
+  &__card1-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 30px;
+
+    @include layout.breakpoint(md) {
+      flex-wrap: wrap;
+    }
+
+    @include layout.breakpoint(sm) {
+      flex-wrap: nowrap;
+    }
+
+    @include layout.breakpoint(xs) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__image-box {
+    flex: 0 0 218px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    border: #636466 0.75px solid;
+    padding: 15px;
+
+    @include layout.breakpoint(xs) {
+      max-width: 218px;
+    }
+  }
+
+  &__price {
+    color: #1d4f78;
+    font-weight: 600;
+    font-size: 20px;
+  }
+
+  &__card-text {
+    font-size: 16px;
+    text-align: start;
+  }
+
+  &__card2 > :not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &__card2 {
+    border: #636466 1px solid;
+    text-align: center;
+    min-width: 330px;
+    padding: 28px 20px;
+
+    @include layout.breakpoint(sm) {
+      min-width: 100%;
+      padding: 20px;
+    }
+  }
+
+  &__card-text_2 {
+    @include layout.breakpoint(sm) {
+      text-align: center;
+    }
+  }
+
+  &__subtitle {
+    color: #636466;
+    font-size: 20px;
+
+    @include layout.breakpoint(xs) {
+      font-size: 13.5px;
+    }
+  }
+
+  &__instagram {
+    max-width: 30px;
+    margin: -5px auto 0;
+  }
+}
+
+.maintenance__menu .menu {
+  &__row {
+    column-gap: 10px;
+
+    @include layout.breakpoint(sm) {
+      column-gap: 30px;
+    }
+  }
+
+  &__icon {
+    background: none;
+    width: 80px;
+    height: 80px;
+
+    @include layout.breakpoint(sm) {
+    }
+
+    @include layout.breakpoint(xs) {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  &__icon img {
+    @include layout.breakpoint(sm) {
+      max-width: 80px;
+      max-height: 80px;
+    }
+
+    @include layout.breakpoint(xs) {
+      max-width: 60px;
+      max-height: 60px;
+    }
+  }
+
+  &__text {
+    max-width: 220px;
+
+    @include layout.breakpoint(sm) {
+      max-width: 190px;
+    }
+
+    @include layout.breakpoint(xs) {
+      max-width: 220px;
+    }
+  }
+
+  &__question {
+    color: #161515;
+    font-weight: 600;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+
+    @include layout.breakpoint(xs) {
+      font-size: 20px;
+    }
+  }
+}
