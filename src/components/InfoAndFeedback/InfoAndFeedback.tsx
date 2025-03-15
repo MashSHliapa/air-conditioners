@@ -1,4 +1,7 @@
+import { NavLink } from 'react-router-dom';
+import { scrollToPage } from '../../helpers/scrollToPage';
 import './InfoAndFeedback.scss';
+
 export const InfoAndFeedback = (props: { children?: React.ReactNode }) => {
   return (
     <div className="info-and-feedback">
@@ -14,7 +17,9 @@ export const InfoAndFeedback = (props: { children?: React.ReactNode }) => {
         <br /> или оставьте заявку и мы с Вами свяжемся
       </div>
       <div className="info-and-feedback__button-wrapper _button-wrapper">
-        <div className="info-and-feedback__button _button">Оставить заявку</div>
+        <NavLink to="/contacts" className="info-and-feedback__button _button" onClick={() => scrollToPage('form')}>
+          Оставить заявку
+        </NavLink>
       </div>
     </div>
   );
