@@ -1,9 +1,8 @@
 import { Title } from '../../components/Title/Title';
 import { ContactsBoxes } from '../../components/ContactsBoxes/ContactsBoxes';
-import { PaymentAndDelivery } from '../../components/PaymentAndDelivery/PaymentAndDelivery';
+import { Form } from '../../components/Form/Form';
 import background from '../../images/contacts.png';
 import './Contacts.scss';
-import { Form } from '../../components/Form/Form';
 
 export const Contacts = () => {
   return (

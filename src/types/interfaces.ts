@@ -45,3 +45,11 @@ export interface INothingFound {
 export interface ActiveFilters {
   [key: string]: (string | number)[] | undefined;
 }
+
+export interface FormDataType {
+  name: string;
+  email: string;
+  phone: string;
+  text: string;
+  agreement?: boolean;
+}

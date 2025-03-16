@@ -104,6 +104,21 @@
     border: #ffb629 2px solid;
   }
 
+  &__error {
+    display: block;
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+
+    @include Layout.breakpoint(md) {
+      font-size: 12px;
+    }
+
+    @include Layout.breakpoint(sm) {
+      font-size: 11px;
+    }
+  }
+
   &__button {
     font-size: 20px;
     width: 100%;
@@ -113,6 +128,14 @@
       font-size: 16px;
       height: 44px;
     }
+  }
+
+  &__button_disabled {
+    font-weight: 530;
+    line-height: 1.5;
+    text-transform: uppercase;
+    color: #484543;
+    background-color: rgb(206, 203, 205);
   }
 }
 
@@ -128,66 +151,12 @@ textarea.form__input {
     max-width: 400px;
   }
 
-  @include Layout.breakpoint(sm) {
-    // max-width: 430px;
-  }
-
   @include Layout.breakpoint(xs) {
     font-size: 10px;
     padding: 17px 27px;
     min-height: 100px;
-    // max-width: 100%;
-    // max-width: 330px;
   }
 }
-
-// .agreement {
-//   &__label {
-//     display: flex;
-//     text-align: center;
-//     justify-content: center;
-//     align-items: center;
-//     font-size: 15px;
-//   }
-
-//   &__default-button:checked + .agreement__new-button::before {
-//     transform: scale(1);
-//   }
-
-//   &__default-button {
-//     display: none;
-//   }
-
-//   &__new-button {
-//     position: relative;
-//     display: inline-block;
-//     flex: 0 0 24px;
-//     height: 24px;
-//     background-color: #dedede;
-//     margin-right: 20px;
-//     cursor: pointer;
-//   }
-
-//   &__new-button::before {
-//     content: '✔';
-//     position: absolute;
-//     top: 0px;
-//     left: 0px;
-//     display: inline-flex;
-//     align-items: center;
-//     justify-content: center;
-//     background-color: #5475a4;
-//     color: white;
-//     width: 24px;
-//     height: 24px;
-//     transform: scale(0);
-
-//   }
-
-//   &__label a {
-//     color: #5475a4;
-//   }
-// }
 
 .agreement {
   &__label {
