@@ -1,0 +1,97 @@
+@use '../Layout/Layout.scss' as layout;
+
+.message {
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fefefe;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 35px 10px;
+
+    @include layout.breakpoint(md) {
+      max-width: 300px;
+      padding: 20px 10px;
+    }
+
+    @include layout.breakpoint(xs) {
+      max-width: 220px;
+      padding: 10px 10px;
+    }
+  }
+
+  &__body *:not(:last-child) {
+    margin-bottom: 20px;
+
+    @include layout.breakpoint(md) {
+      margin-bottom: 13px;
+    }
+  }
+
+  &__icon {
+    width: 70px;
+    height: 70px;
+
+    @include layout.breakpoint(md) {
+      width: 50px;
+      height: 50px;
+    }
+
+    @include layout.breakpoint(xs) {
+      width: 35px;
+      height: 35px;
+    }
+  }
+
+  &__icon_error {
+    width: 50px;
+    height: 50px;
+
+    @include layout.breakpoint(md) {
+      width: 35px;
+      height: 35px;
+    }
+
+    @include layout.breakpoint(xs) {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  &__text {
+    line-height: inherit;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+
+    @include layout.breakpoint(md) {
+      font-size: 16px;
+    }
+
+    @include layout.breakpoint(xs) {
+      font-size: 12px;
+    }
+  }
+
+  &__text_error {
+    color: #827c76;
+  }
+
+  &__button {
+    font-family: 'Inter', sans-serif;
+    padding: 13px 25px;
+    background-color: #1d4f78;
+    color: white;
+    cursor: pointer;
+
+    @include layout.breakpoint(md) {
+      font-size: 15px;
+      padding: 11px 21px;
+    }
+
+    @include layout.breakpoint(xs) {
+      padding: 7px 15px;
+    }
+  }
+}

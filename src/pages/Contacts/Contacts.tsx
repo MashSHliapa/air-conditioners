@@ -3,6 +3,8 @@ import { ContactsBoxes } from '../../components/ContactsBoxes/ContactsBoxes';
 import { Form } from '../../components/Form/Form';
 import background from '../../images/contacts.png';
 import './Contacts.scss';
+import { MessageSuccess } from '../../components/MessageSuccess/MessageSuccess';
+import { MessageError } from '../../components/MessageError/MessageError';
 
 export const Contacts = () => {
   return (
@@ -26,6 +28,8 @@ export const Contacts = () => {
       </div>
       <ContactsBoxes />
       <Form />
+      {/* <MessageSuccess closeForm={() => {}} /> */}
+      {/* <MessageError closeForm={() => {}} /> */}
     </>
   );
 };
