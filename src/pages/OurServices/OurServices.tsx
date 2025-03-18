@@ -5,7 +5,6 @@ import services1 from '../../images/services/services1.jpg';
 import services2 from '../../images/services/services2.jpg';
 import services3 from '../../images/services/services3.jpg';
 import './OurServices.scss';
-import { Nav } from 'react-bootstrap';
 
 export const OurServices = () => {
   return (
@@ -22,7 +21,13 @@ export const OurServices = () => {
                 <img src={services1} alt="services1" />
               </div>
               <div className="our-services__button-wrapper _button-wrapper">
-                <NavLink to="/installation-and-removal" className="our-services__button _button" onClick={() => scrollToPage('installation-and-removal')}>Подробнее</NavLink>
+                <NavLink
+                  to="/installation-and-removal"
+                  className="our-services__button _button"
+                  onClick={() => scrollToPage('installation-and-removal')}
+                >
+                  Подробнее
+                </NavLink>
               </div>
             </div>
             <div className="our-services__card">
@@ -31,7 +36,13 @@ export const OurServices = () => {
                 <img src={services2} alt="services1" />
               </div>
               <div className="our-services__button-wrapper _button-wrapper">
-                <NavLink to="/maintenance" className="our-services__button _button" onClick={() => scrollToPage('maintenance')}>Подробнее</NavLink>
+                <NavLink
+                  to="/maintenance"
+                  className="our-services__button _button"
+                  onClick={() => scrollToPage('maintenance')}
+                >
+                  Подробнее
+                </NavLink>
               </div>
             </div>
             <div className="our-services__card">

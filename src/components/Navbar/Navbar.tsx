@@ -34,7 +34,7 @@ export const Navbar = () => {
             </NavLink>
           </li>
           <li className="navbar__item">
-            <NavLink to="/services" className="navbar__link" onClick={() => scrollToPage('about')}>
+            <NavLink to="/services" className="navbar__link" onClick={() => scrollToPage('our-services')}>
               Услуги
             </NavLink>
           </li>
@@ -96,8 +96,8 @@ export const Navbar = () => {
             )}
           </li>
           <li className="navbar__item">
-            <NavLink to="/works" className="navbar__link" onClick={() => scrollToPage('our-works')}>
-              Наши работы
+            <NavLink to="/payment-and-delivery" className="navbar__link" onClick={() => scrollToPage('payment-delivery')}>
+              Оплата и доставка
             </NavLink>
           </li>
           <li className="navbar__item">
