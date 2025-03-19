@@ -1,0 +1,84 @@
+@use '../Layout/Layout.scss' as layout;
+
+.return-of-goods {
+  background-color: #e9e9e9;
+
+  &__body {
+    padding: 50px 0 40px;
+
+    @include layout.breakpoint(md) {
+      padding: 30px 0;
+    }
+
+    @include layout.breakpoint(xs) {
+      padding: 20px 0;
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    @include layout.breakpoint(sm) {
+      gap: 20px;
+    }
+  }
+
+  &__title .title__text {
+    text-align: start;
+  }
+
+  &__vector {
+    display: flex;
+    cursor: pointer;
+    margin-top: 8px;
+
+    @include layout.breakpoint(md) {
+      margin-top: 5px;
+    }
+  }
+
+  &__vector img {
+    min-width: 25px;
+    min-height: 25px;
+
+    @include layout.breakpoint(md) {
+      min-width: 20px;
+      min-height: 20px;
+    }
+
+    @include layout.breakpoint(sm) {
+      min-width: 10px;
+      min-height: 10px;
+      max-width: 20px;
+      max-height: 20px;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    margin-top: 15px;
+
+    @include layout.breakpoint(md) {
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    @include layout.breakpoint(xs) {
+      font-size: 12px;
+    }
+  }
+
+  &__text span {
+    display: block;
+  }
+
+  &__text > :not(:last-child) {
+    margin-bottom: 20px;
+
+    @include layout.breakpoint(md) {
+      margin-bottom: 10px;
+    }
+  }
+}
