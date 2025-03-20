@@ -102,7 +102,7 @@ export const CardItem = () => {
             <div className="description__price">от {selectCard.price} BYN</div>
 
             <div className="description__button-and-favorite">
-              <ButtonAndFavorite title="ЗАКАЗАТЬ" linkTo={`#`} card={selectCard} />
+              <ButtonAndFavorite title="ЗАКАЗАТЬ" linkTo={`/contacts`} scrollTo="form" card={selectCard} />
             </div>
           </div>
         </div>

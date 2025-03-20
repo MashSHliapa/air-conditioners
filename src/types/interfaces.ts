@@ -38,7 +38,7 @@ export interface ICardItem {
 export interface INothingFound {
   image: string;
   subtitle: string;
-  text: string;
+  text?: string;
   imgActive?: string;
 }
 

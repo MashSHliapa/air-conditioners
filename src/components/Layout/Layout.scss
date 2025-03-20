@@ -228,6 +228,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  height: 100%;
 
   @include breakpoint(sm) {
     justify-content: center;

@@ -16,7 +16,7 @@ export const Main = () => {
               <li className="main__menu-item">монтаж</li>
               <li className="main__menu-item">сервис</li>
             </ul>
-            <div className="main__button-wrapper">
+            <div className="main__button-wrapper _button-wrapper">
               <NavLink to="/" className="main__button _button" onClick={() => scrollToPage('catalog')}>
                 Каталог
               </NavLink>

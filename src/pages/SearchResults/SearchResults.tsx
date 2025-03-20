@@ -25,7 +25,15 @@ export const SearchResults = () => {
             <>
               <div className="search-results__total">По Вашему запросу найдено {filteredPosts.length} товара(ов)</div>
               <div className="search-results__content-box _content-box">
-                <Filters />
+                <Filters
+                  activeFilters={{}}
+                  addFeatures={null}
+                  activeSort={null}
+                  onFilterChange={() => {}}
+                  onSortChange={() => {}}
+                  getAddFeatures={() => {}}
+                  onResetAllFilters={() => {}}
+                />
                 <div className="search-results__data">
                   <div className="search-results__cards _cards">{posts}</div>
                 </div>

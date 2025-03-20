@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { scrollToPage } from '../../helpers/scrollToPage';
 import { addConditionerToFavorite, removeConditionerFromFavorite } from '../../redux/favoritesSlice';
 import { RootState } from '../../redux/store';
 import { ICardItem } from '../../types/interfaces';
@@ -8,10 +9,12 @@ import './ButtonAndFavorite.scss';
 export const ButtonAndFavorite = ({
   title,
   linkTo,
+  scrollTo,
   card,
 }: {
   title: string;
   linkTo?: string;
+  scrollTo?: string;
   card: { id: number };
 }) => {
   const dispatch = useDispatch();
@@ -31,7 +34,11 @@ export const ButtonAndFavorite = ({
   return (
     <div className="button-and-favorite">
       <div className="button-and-favorite__button-wrapper _button-wrapper">
-        <div className="button-and-favorite__button _button">{linkTo && <Link to={linkTo}>{title}</Link>}</div>
+        {linkTo && (
+          <Link to={linkTo} className="button-and-favorite__button _button" onClick={() => scrollToPage(scrollTo)}>
+            {title}
+          </Link>
+        )}
       </div>
       <div
         className={`button-and-favorite__heart ${

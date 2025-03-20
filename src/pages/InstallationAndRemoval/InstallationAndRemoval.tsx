@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import { scrollToPage } from '../../helpers/scrollToPage';
 import { Return } from '../../components/Return/Return';
 import { Title } from '../../components/Title/Title';
 import { InfoAndFeedback } from '../../components/InfoAndFeedback/InfoAndFeedback';
@@ -8,7 +10,6 @@ import image1 from '../../images/services/services1.jpg';
 import image2 from '../../images/services/not_ours_item.jpg';
 import image3 from '../../images/services/services2.jpg';
 import './InstallationAndRemoval.scss';
-import { NavLink } from 'react-router-dom';
 
 export const InstallationAndRemoval = () => {
   const [isOpenDescription, setIsOpenDescription] = useState([false, false, false]);
@@ -68,7 +69,13 @@ export const InstallationAndRemoval = () => {
                     трубопровода. <b>Окончательная стоимость озвучивается после замера.</b>
                   </p>
                   <div className="installation-and-removal__card-button-wrapper _button-wrapper">
-                    <div className="installation-and-removal__card-button _button">КАТАЛОГ</div>
+                    <NavLink
+                      to="/"
+                      className="installation-and-removal__card-button _button"
+                      onClick={() => scrollToPage('catalog')}
+                    >
+                      КАТАЛОГ
+                    </NavLink>
                   </div>
                 </>
               )}

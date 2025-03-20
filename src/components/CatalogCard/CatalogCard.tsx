@@ -12,7 +12,12 @@ export const CatalogCard = (props: { post: ICatalogCard }) => {
         <div className="card__price">от {props.post.price} BYN</div>
       </div>
       <div className="card__button-and-favorite">
-        <ButtonAndFavorite title="ПОДРОБНЕЕ" linkTo={`/selected/${props.post.id}`} card={props.post} />
+        <ButtonAndFavorite
+          title="ПОДРОБНЕЕ"
+          linkTo={`/selected/${props.post.id}`}
+          card={props.post}
+          scrollTo="card-item"
+        />
       </div>
     </div>
   );

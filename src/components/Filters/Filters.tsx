@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import './Filters.scss';
+import { scrollToPage } from '../../helpers/scrollToPage';
 
 export const Filters = ({
   activeFilters,
@@ -137,10 +138,18 @@ export const Filters = ({
         </ul>
         <div className="filters__buttons">
           <div className="filters__buttons-wrapper _button-wrapper">
-            <div className="filters__button _button">СМОТРЕТЬ</div>
+            <div className="filters__button _button" onClick={() => scrollToPage('catalog__cards')}>
+              СМОТРЕТЬ
+            </div>
           </div>
           <div className="filters__buttons-wrapper _button-wrapper">
-            <div className="filters__button-reset" onClick={() => onResetAllFilters()}>
+            <div
+              className="filters__button-reset"
+              onClick={() => {
+                onResetAllFilters();
+                scrollToPage('catalog__cards');
+              }}
+            >
               Сбросить все
             </div>
           </div>

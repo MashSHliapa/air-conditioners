@@ -6,10 +6,12 @@ import { Title } from '../../components/Title/Title';
 import { CatalogCard } from '../../components/CatalogCard/CatalogCard';
 import { Filters } from '../../components/Filters/Filters';
 import { Pagination } from '../../components/Pagination/Pagination';
+import { NothingFound } from '../../components/NothingFound/NothingFound';
 import { RootState } from '../../redux/store';
 import { ActiveFilters, ICatalogCard } from '../../types/interfaces';
 import vectorLeft from '../../icons/vector_left.svg';
 import vectorRight from '../../icons/vector_right.svg';
+import image from '../../images/magnifying_glass.png';
 import './Catalog.scss';
 
 export const Catalog = () => {
@@ -118,6 +120,7 @@ export const Catalog = () => {
   const catalogPage = isPageValid
     ? filteredPosts.slice(startIndex, lastIndex).map((item) => <CatalogCard key={item.id} post={item} />)
     : null;
+
   const handlePageChange = (newPage: number) => {
     setCurrentPage(newPage);
   };
@@ -142,7 +145,13 @@ export const Catalog = () => {
                   onResetAllFilters={onResetAllFilters}
                 />
               </div>
-              <div className="catalog__cards _cards">{catalogPage}</div>
+              {catalogPage && catalogPage.length > 0 ? (
+                <div className="catalog__cards _cards">{catalogPage}</div>
+              ) : (
+                <div className="catalog__cards cards-not-found">
+                  <NothingFound image={image} subtitle="Ничего не найдено" />
+                </div>
+              )}
             </div>
             {filteredPosts.length > limit && (
               <div className="catalog__pagination-box">
