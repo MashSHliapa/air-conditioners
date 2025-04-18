@@ -55,8 +55,7 @@ export const Form = () => {
     }
   };
 
-  const onSubmit = async (data: FormDataType) => {
-    console.log(data);
+  const onSubmitForm = async (data: FormDataType) => {
     try {
       setLoading(true);
       const formData = new FormData();
@@ -67,7 +66,7 @@ export const Form = () => {
       formData.append('text', data.text);
       formData.append('agreement', data.agreement ? 'true' : 'false');
 
-      const response = await fetch('http://localhost:3011/send-email', {
+      const response = await fetch('http://localhost:3040/send-email', {
         method: 'POST',
         body: formData,
       });
@@ -75,6 +74,7 @@ export const Form = () => {
       if (response.ok) {
         reset();
         setSuccess(true);
+        setPhone('');
       } else {
         setError(true);
         console.error('Failed to send email');
@@ -112,7 +112,7 @@ export const Form = () => {
                 method="POST"
                 id="form"
                 // autoComplete="off"
-                onSubmit={handleSubmit(onSubmit)}
+                onSubmit={handleSubmit(onSubmitForm)}
               >
                 <div className="form__item">
                   <input
