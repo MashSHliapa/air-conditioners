@@ -1,9 +1,9 @@
 import { NavLink } from 'react-router-dom';
 import { Title } from '../../components/Title/Title';
 import { scrollToPage } from '../../helpers/scrollToPage';
-import services1 from '../../images/services/services1.jpg';
-import services2 from '../../images/services/services2.jpg';
-import services3 from '../../images/services/services3.jpg';
+import services1 from '../../assets/images/services/services1.jpg';
+import services2 from '../../assets/images/services/services2.jpg';
+import services3 from '../../assets/images/services/services3.jpg';
 import './OurServices.scss';
 
 export const OurServices = () => {

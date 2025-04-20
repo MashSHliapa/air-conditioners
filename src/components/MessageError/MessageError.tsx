@@ -1,4 +1,4 @@
-import error from '../../icons/error.svg';
+import error from '../../assets/icons/error.svg';
 import './Messages.scss';
 
 export function MessageError({ closeForm }: { closeForm: () => void }) {

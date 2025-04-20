@@ -1,5 +1,7 @@
-import { useSelector } from 'react-redux';
-import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect, useState } from 'react';
+import { Action, ThunkDispatch } from '@reduxjs/toolkit';
+import { fetchCatalog } from '../../redux/catalogSlice';
 import { NavLink } from 'react-router-dom';
 import { scrollToPage } from '../../helpers/scrollToPage';
 import { Title } from '../../components/Title/Title';
@@ -9,19 +11,40 @@ import { Pagination } from '../../components/Pagination/Pagination';
 import { NothingFound } from '../../components/NothingFound/NothingFound';
 import { RootState } from '../../redux/store';
 import { ActiveFilters, ICatalogCard } from '../../types/interfaces';
-import vectorLeft from '../../icons/vector_left.svg';
-import vectorRight from '../../icons/vector_right.svg';
-import image from '../../images/magnifying_glass.png';
+import vectorLeft from '../../assets/icons/vector_left.svg';
+import vectorRight from '../../assets/icons/vector_right.svg';
+import image from '../../assets/images/magnifying_glass.png';
 import './Catalog.scss';
 
 export const Catalog = () => {
-  const { data: posts, limit } = useSelector((state: RootState) => state.catalog);
+  const { data: posts, limit, loading, error } = useSelector((state: RootState) => state.catalog);
+
+  const dispatch = useDispatch<ThunkDispatch<RootState, null, Action>>();
+
+  useEffect(() => {
+    dispatch(fetchCatalog());
+  }, [dispatch]);
 
   const [currentPage, setCurrentPage] = useState(Number(window.location.pathname.split('/').pop()) || 1);
   const [filteredPosts, setFilteredPosts] = useState(posts);
   const [activeFilters, setActiveFilters] = useState<ActiveFilters>({});
   const [activeSort, setActiveSort] = useState<string | null>(null);
   const [addFeatures, setAddFeatures] = useState<string[] | never>([]);
+
+  useEffect(() => {
+    setFilteredPosts(posts);
+  }, [posts]);
+
+  useEffect(() => {
+    if (error) {
+      scrollToPage('text-danger');
+      console.log(error);
+    }
+  }, [error]);
+
+  if (loading) {
+    return <div>Идет загрузка...</div>;
+  }
 
   const applyFiltersAndSort = (
     filters: Record<string, unknown>,
@@ -101,7 +124,7 @@ export const Catalog = () => {
   const startIndex = lastIndex - limit;
 
   const totalPages = Math.ceil(posts.length / limit);
-  const isPageValid = currentPage <= totalPages;
+  const isPageValid = currentPage > 0 && (filteredPosts.length === 0 ? currentPage === 1 : currentPage <= totalPages);
 
   const handleClickPrevBtn = () => {
     if (currentPage > 1) {

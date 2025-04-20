@@ -1,6 +1,6 @@
 import { Title } from '../../components/Title/Title';
-import photoLeft from '../../images/kinds_left.jpg';
-import photoRight from '../../images/kinds_right.jpg';
+import photoLeft from '../../assets/images/kinds_left.jpg';
+import photoRight from '../../assets/images/kinds_right.jpg';
 import './Kinds.scss';
 
 export const Kinds = () => {

@@ -1,9 +1,9 @@
-import phone from '../../icons/phone.svg';
-import message from '../../icons/message.svg';
-import viber from '../../icons/viber.svg';
-import instagram from '../../icons/instagram.svg';
-import whatsapp from '../../icons/whatsApp.svg';
-import youtube from '../../icons/youtube.svg';
+import phone from '../../assets/icons/phone.svg';
+import message from '../../assets/icons/message.svg';
+import viber from '../../assets/icons/viber.svg';
+import instagram from '../../assets/icons/instagram.svg';
+import whatsapp from '../../assets/icons/whatsApp.svg';
+import youtube from '../../assets/icons/youtube.svg';
 import './ContactsBoxes.scss';
 
 export const ContactsBoxes = () => {

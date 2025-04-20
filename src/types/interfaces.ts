@@ -53,3 +53,10 @@ export interface FormDataType {
   text: string;
   agreement?: boolean;
 }
+
+export interface DataInitialState {
+  data: ICardItem[];
+  limit: number;
+  loading: boolean;
+  error: null | string;
+}

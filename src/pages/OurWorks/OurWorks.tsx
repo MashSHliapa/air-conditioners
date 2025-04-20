@@ -1,6 +1,6 @@
 import { Title } from '../../components/Title/Title';
 import { ModeAndSocialMedia } from '../../components/ModeAndSocialMedia/ModeAndSocialMedia';
-import photo from '../../images/our_works.jpg';
+import photo from '../../assets/images/our_works.jpg';
 import './OurWorks.scss';
 
 export const OurWorks = () => {

@@ -1,12 +1,12 @@
 import { Return } from '../../components/Return/Return';
 import { Title } from '../../components/Title/Title';
 import { InfoAndFeedback } from '../../components/InfoAndFeedback/InfoAndFeedback';
-import image1 from '../../images/services/services1.jpg';
-import image2 from '../../images/services/maintenance.jpg';
-import instagram from '../../icons/instagram.svg';
-import menu1 from '../../icons/services_icon1.svg';
-import menu2 from '../../icons/services_icon2.svg';
-import menu3 from '../../icons/services_icon3.svg';
+import image1 from '../../assets/images/services/services1.jpg';
+import image2 from '../../assets/images/services/maintenance.jpg';
+import instagram from '../../assets/icons/instagram.svg';
+import menu1 from '../../assets/icons/services_icon1.svg';
+import menu2 from '../../assets/icons/services_icon2.svg';
+import menu3 from '../../assets/icons/services_icon3.svg';
 import './Maintenance.scss';
 
 export const Maintenance = () => {

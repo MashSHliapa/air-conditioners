@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { scrollToPage } from '../../helpers/scrollToPage';
-import vectorOpen from '../../icons/vector_open.svg';
-import vectorClose from '../../icons/vector_close.svg';
+import vectorOpen from '../../assets/icons/vector_open.svg';
+import vectorClose from '../../assets/icons/vector_close.svg';
 import './Navbar.scss';
 
 export const Navbar = () => {
@@ -96,7 +96,11 @@ export const Navbar = () => {
             )}
           </li>
           <li className="navbar__item">
-            <NavLink to="/payment-and-delivery" className="navbar__link" onClick={() => scrollToPage('payment-delivery')}>
+            <NavLink
+              to="/payment-and-delivery"
+              className="navbar__link"
+              onClick={() => scrollToPage('payment-delivery')}
+            >
               Оплата и доставка
             </NavLink>
           </li>

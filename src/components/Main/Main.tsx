@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import { scrollToPage } from '../../helpers/scrollToPage';
 import { Discount } from '../Discount/Discount';
-import background from '../../images/main_photo.jpg';
+import background from '../../assets/images/main_photo.jpg';
 import './Main.scss';
 
 export const Main = () => {

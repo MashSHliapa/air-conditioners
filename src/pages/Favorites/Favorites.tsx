@@ -4,8 +4,8 @@ import { CatalogCard } from '../../components/CatalogCard/CatalogCard';
 import { NothingFound } from '../../components/NothingFound/NothingFound';
 import { RootState } from '../../redux/store';
 import { ICardItem } from '../../types/interfaces';
-import image from '../../images/favorites_heart.png';
-import heartActive from '../../icons/favorite_active.svg';
+import image from '../../assets/images/favorites_heart.png';
+import heartActive from '../../assets/icons/favorite_active.svg';
 import './Favorites.scss';
 
 export const Favorites = () => {

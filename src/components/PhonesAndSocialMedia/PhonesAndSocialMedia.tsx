@@ -1,6 +1,6 @@
 import './PhonesAndSocialMedia.scss';
-import viber from '../../icons/viber.svg';
-import whatsApp from '../../icons/whatsapp.svg';
+import viber from '../../assets/icons/viber.svg';
+import whatsApp from '../../assets/icons/whatsapp.svg';
 
 export const PhonesAndSocialMedia = () => {
   return (

@@ -3,10 +3,10 @@ import { useParams } from 'react-router-dom';
 import { ButtonAndFavorite } from '../../components/ButtonAndFavorite/ButtonAndFavorite';
 import { RootState } from '../../redux/store';
 import { ICardItem } from '../../types/interfaces';
-import menu1 from '../../icons/availability.svg';
-import menu2 from '../../icons/delivery_card.svg';
-import menu3 from '../../icons/discount.svg';
-import menu4 from '../../icons/price.svg';
+import menu1 from '../../assets/icons/availability.svg';
+import menu2 from '../../assets/icons/delivery_card.svg';
+import menu3 from '../../assets/icons/discount.svg';
+import menu4 from '../../assets/icons/price.svg';
 import './CardItem.scss';
 
 export const CardItem = () => {

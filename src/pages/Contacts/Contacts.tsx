@@ -1,7 +1,7 @@
 import { Title } from '../../components/Title/Title';
 import { ContactsBoxes } from '../../components/ContactsBoxes/ContactsBoxes';
 import { Form } from '../../components/Form/Form';
-import background from '../../images/contacts.png';
+import background from '../../assets/images/contacts.png';
 import './Contacts.scss';
 
 export const Contacts = () => {

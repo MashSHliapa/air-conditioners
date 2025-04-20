@@ -9,7 +9,7 @@ import { Navbar } from '../Navbar/Navbar';
 import { BurgerMenu } from '../BurgerMenu/BurgerMenu';
 import { SearchForm } from '../SearchForm/SearchForm';
 import { RootState } from '../../redux/store';
-import favorite from '../../icons/favorite.svg';
+import favorite from '../../assets/icons/favorite.svg';
 import './Header.scss';
 
 export const Header = () => {

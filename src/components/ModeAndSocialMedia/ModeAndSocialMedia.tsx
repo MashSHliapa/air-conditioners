@@ -1,5 +1,5 @@
-import instagram from '../../icons/instagram.svg';
-import youtube from '../../icons/youtube.svg';
+import instagram from '../../assets/icons/instagram.svg';
+import youtube from '../../assets/icons/youtube.svg';
 import './ModeAndSocialMedia.scss';
 
 export const ModeAndSocialMedia = () => {

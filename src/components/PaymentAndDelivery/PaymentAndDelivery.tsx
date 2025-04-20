@@ -1,8 +1,8 @@
 import { Title } from '../Title/Title';
-import cash from '../../icons/cash.svg';
-import nonCash from '../../icons/non_cash.svg';
-import paymentByCard from '../../icons/payment_by_card.svg';
-import delivery from '../../icons/delivery.svg';
+import cash from '../../assets/icons/cash.svg';
+import nonCash from '../../assets/icons/non_cash.svg';
+import paymentByCard from '../../assets/icons/payment_by_card.svg';
+import delivery from '../../assets/icons/delivery.svg';
 import './PaymentAndDelivery.scss';
 import { ReturnOfGoods } from '../ReturnOfGoods/ReturnOfGoods';
 

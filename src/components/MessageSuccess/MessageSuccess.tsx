@@ -1,4 +1,4 @@
-import success from '../../icons/success.svg';
+import success from '../../assets/icons/success.svg';
 import '../MessageError/Messages.scss';
 
 export function MessageSuccess({ closeForm }: { closeForm: () => void }) {

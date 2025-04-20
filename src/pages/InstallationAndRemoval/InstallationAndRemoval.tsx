@@ -4,11 +4,11 @@ import { scrollToPage } from '../../helpers/scrollToPage';
 import { Return } from '../../components/Return/Return';
 import { Title } from '../../components/Title/Title';
 import { InfoAndFeedback } from '../../components/InfoAndFeedback/InfoAndFeedback';
-import vectorClose from '../../icons/vector_big_close.svg';
-import vectorOpen from '../../icons/vector_big_open.svg';
-import image1 from '../../images/services/services1.jpg';
-import image2 from '../../images/services/not_ours_item.jpg';
-import image3 from '../../images/services/services2.jpg';
+import vectorClose from '../../assets/icons/vector_big_close.svg';
+import vectorOpen from '../../assets/icons/vector_big_open.svg';
+import image1 from '../../assets/images/services/services1.jpg';
+import image2 from '../../assets/images/services/not_ours_item.jpg';
+import image3 from '../../assets/images/services/services2.jpg';
 import './InstallationAndRemoval.scss';
 
 export const InstallationAndRemoval = () => {

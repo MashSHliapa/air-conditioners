@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Title } from '../Title/Title';
-import vectorClose from '../../icons/vector_big_close.svg';
-import vectorOpen from '../../icons/vector_big_open.svg';
+import vectorClose from '../../assets/icons/vector_big_close.svg';
+import vectorOpen from '../../assets/icons/vector_big_open.svg';
 import './ReturnOfGoods.scss';
 
 export const ReturnOfGoods = () => {

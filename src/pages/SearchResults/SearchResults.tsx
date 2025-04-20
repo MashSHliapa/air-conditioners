@@ -4,7 +4,7 @@ import { Title } from '../../components/Title/Title';
 import { Filters } from '../../components/Filters/Filters';
 import { NothingFound } from '../../components/NothingFound/NothingFound';
 import { ICardItem } from '../../types/interfaces';
-import search from '../../images/magnifying_glass.png';
+import search from '../../assets/images/magnifying_glass.png';
 import './SearchResults.scss';
 
 export const SearchResults = () => {

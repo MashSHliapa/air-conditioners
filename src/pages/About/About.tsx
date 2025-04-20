@@ -1,10 +1,10 @@
 import { Title } from '../../components/Title/Title';
 import { Data } from '../../components/Data/Data';
-import menu1 from '../../icons/menu1.svg';
-import menu2 from '../../icons/menu2.svg';
-import menu3 from '../../icons/menu3.svg';
-import certificate1 from '../../images/certificate1.jpg';
-import certificate2 from '../../images/certificate2.jpg';
+import menu1 from '../../assets/icons/menu1.svg';
+import menu2 from '../../assets/icons/menu2.svg';
+import menu3 from '../../assets/icons/menu3.svg';
+import certificate1 from '../../assets/images/certificate1.jpg';
+import certificate2 from '../../assets/images/certificate2.jpg';
 import './About.scss';
 
 export const About = () => {

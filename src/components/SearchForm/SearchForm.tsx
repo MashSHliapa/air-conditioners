@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { scrollToPage } from '../../helpers/scrollToPage';
 import { RootState } from '../../redux/store';
-import search from '../../icons/search.svg';
+import search from '../../assets/icons/search.svg';
 import './SearchForm.scss';
 
 export const SearchForm = () => {
