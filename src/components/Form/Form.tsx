@@ -7,6 +7,7 @@ import { MessageSuccess } from '../MessageSuccess/MessageSuccess';
 import { MessageError } from '../MessageError/MessageError';
 import { FormDataType } from '../../types/interfaces';
 import './Form.scss';
+import { Loading } from '../Loading/Loading';
 
 export const Form = () => {
   const [phone, setPhone] = useState('');
@@ -196,18 +197,7 @@ export const Form = () => {
           </div>
         </div>
       </div>
-      {loading && (
-        <div className="loading _message-fixed">
-          <div className="loading__text">
-            Идет отправка
-            <div className="loading__dots">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </div>
-        </div>
-      )}
+      {loading && <Loading>Идет отправка</Loading>}
       {success && <MessageSuccess closeForm={() => setSuccess(false)} />}
       {error && <MessageError closeForm={() => setError(false)} />}
     </>

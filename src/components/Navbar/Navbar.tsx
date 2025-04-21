@@ -29,7 +29,7 @@ export const Navbar = () => {
       <nav className="navbar__body">
         <ul className="navbar__list">
           <li className="navbar__item">
-            <NavLink to="/catalog/pages/1" className="navbar__link" onClick={() => scrollToPage('catalog')}>
+            <NavLink to="/" className="navbar__link" onClick={() => scrollToPage('catalog')}>
               Каталог
             </NavLink>
           </li>

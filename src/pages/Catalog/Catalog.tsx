@@ -9,6 +9,7 @@ import { CatalogCard } from '../../components/CatalogCard/CatalogCard';
 import { Filters } from '../../components/Filters/Filters';
 import { Pagination } from '../../components/Pagination/Pagination';
 import { NothingFound } from '../../components/NothingFound/NothingFound';
+import { Loading } from '../../components/Loading/Loading';
 import { RootState } from '../../redux/store';
 import { ActiveFilters, ICatalogCard } from '../../types/interfaces';
 import vectorLeft from '../../assets/icons/vector_left.svg';
@@ -38,12 +39,15 @@ export const Catalog = () => {
   useEffect(() => {
     if (error) {
       scrollToPage('text-danger');
-      console.log(error);
     }
   }, [error]);
 
+  if (error) {
+    return <div className="text-danger">{error}</div>;
+  }
+
   if (loading) {
-    return <div>Идет загрузка...</div>;
+    return <Loading>Загрузка</Loading>;
   }
 
   const applyFiltersAndSort = (
@@ -216,7 +220,7 @@ export const Catalog = () => {
           </div>
         ) : (
           <div className="catalog__error">
-            <div className="catalog__error-text">Такой страницы не существует</div>
+            <div className="catalog__error-text text-danger">Такой страницы не существует</div>
           </div>
         )}
       </div>

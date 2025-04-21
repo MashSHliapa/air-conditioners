@@ -25,6 +25,7 @@ export const catalogSlice = createSlice({
     });
     builder.addCase(fetchCatalog.rejected, (state) => {
       state.loading = false;
+      state.error = 'что-то пошло не так';
     });
   },
 });

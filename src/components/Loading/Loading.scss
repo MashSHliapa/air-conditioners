@@ -1,0 +1,53 @@
+@use '../../components/Layout/Layout.scss' as layout;
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__text {
+    color: #1d4f78;
+    font-size: 32px;
+    margin-top: 150px;
+
+    @include layout.breakpoint(md) {
+      font-size: 24px;
+    }
+
+    @include layout.breakpoint(sm) {
+      font-size: 20px;
+    }
+  }
+
+  &__dots span {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin: 0 3px;
+    background-color: #fff;
+    border-radius: 50%;
+    animation: pulse 1.5s infinite;
+
+    &:nth-child(1) {
+      animation-delay: 0s;
+    }
+
+    &:nth-child(2) {
+      animation-delay: 0.5s;
+    }
+
+    &:nth-child(3) {
+      animation-delay: 1s;
+    }
+  }
+
+  @keyframes pulse {
+    0%,
+    100% {
+      background-color: #fff;
+    }
+    50% {
+      background-color: #1d4f78;
+    }
+  }
+}

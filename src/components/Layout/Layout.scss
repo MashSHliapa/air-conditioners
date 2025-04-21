@@ -50,7 +50,6 @@ body {
   font-weight: 400;
   font-size: 16px;
   color: #161515;
-  // background-color:#FDF9F9;
 }
 
 @mixin breakpoint($size) {
@@ -165,7 +164,6 @@ body {
 
 ._endless-bg {
   position: relative;
-  background: #e9e9e9;
 
   &::before {
     content: '';
@@ -173,7 +171,7 @@ body {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 100vw;
+    width: calc(100vw - 15px);
     height: 100%;
     z-index: -1;
     background-color: #e9e9e9;
@@ -255,4 +253,10 @@ body {
 
 .note {
   white-space: nowrap;
+}
+
+.text-danger {
+  color: red;
+  text-align: center;
+  padding: 20px 0;
 }
