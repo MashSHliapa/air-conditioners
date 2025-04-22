@@ -1,6 +1,11 @@
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { Action, ThunkDispatch } from '@reduxjs/toolkit';
+import { fetchCatalog } from '../../redux/catalogSlice';
 import { ButtonAndFavorite } from '../../components/ButtonAndFavorite/ButtonAndFavorite';
+import { Loading } from '../../components/Loading/Loading';
+import { scrollToPage } from '../../helpers/scrollToPage';
 import { RootState } from '../../redux/store';
 import { ICardItem } from '../../types/interfaces';
 import menu1 from '../../assets/icons/availability.svg';
@@ -10,14 +15,36 @@ import menu4 from '../../assets/icons/price.svg';
 import './CardItem.scss';
 
 export const CardItem = () => {
-  const posts = useSelector((state: RootState) => state.catalog.data);
+  const { data: posts, loading, error } = useSelector((state: RootState) => state.catalog);
 
   const { postId } = useParams<string>();
+  const dispatch = useDispatch<ThunkDispatch<RootState, null, Action>>();
 
-  const selectCard = posts.find((item: ICardItem) => item.id == (postId as unknown as number));
+  useEffect(() => {
+    if (!posts || posts.length === 0) {
+      dispatch(fetchCatalog());
+      scrollToPage('card-item');
+    }
+  }, [dispatch, posts]);
+
+  useEffect(() => {
+    if (error) {
+      scrollToPage('text-danger');
+    }
+  }, [error]);
+
+  const selectCard = posts.find((card: ICardItem) => card.id === Number(postId));
+
+  if (loading) {
+    return <Loading>Загрузка...</Loading>;
+  }
+
+  if (error) {
+    return <div className="text-danger">{error}</div>;
+  }
 
   if (!selectCard) {
-    return <div>Card not found</div>;
+    return <div className="text-danger">Информация не найдена</div>;
   }
 
   return (
@@ -26,7 +53,6 @@ export const CardItem = () => {
         <div className="card-item__body">
           <div className="card-item__characteristics characteristics">
             <div className="characteristics__title">{selectCard.title}</div>
-
             <div className="characteristics__content-box">
               <h4 className="characteristics__subtitle">Характеристики</h4>
               <ul className="characteristics__list">
@@ -34,14 +60,12 @@ export const CardItem = () => {
                   <h5 className="characteristics__name">Категория:</h5>
                   <h5 className="characteristics__value">{selectCard.category}</h5>
                 </li>
-
                 <li className="characteristics__item">
                   <h5 className="characteristics__name">Площадь:</h5>
                   <h5 className="characteristics__value">
                     {selectCard.square} м<sup className="square-meter">2</sup>
                   </h5>
                 </li>
-
                 <li className="characteristics__item">
                   <h5 className="characteristics__name">Технология:</h5>
                   <h5 className="characteristics__value">{selectCard.technology}</h5>
@@ -54,32 +78,23 @@ export const CardItem = () => {
           </div>
           <div className="card-item__description description">
             <h4 className="description__subtitle">Описание</h4>
-
             <ul className="description__list">
               <li className="description__item description__item_bold">
                 Обслуживаемая площадь: {selectCard.serviced_area} м<sup className="square-meter">2</sup>
               </li>
               <li className="description__item">Режим работы: {selectCard.mode}</li>
-
               <li className="description__item">
                 Рабочая температура при охлаждении:{selectCard.cooling_temperature} С
               </li>
-
               <li className="description__item">
                 Рабочая температура при обогреве: от {selectCard.heating_temperature} С
               </li>
-
               <li className="description__item">Шум внутреннего блока: {selectCard.indoor_unit_noise} дБ</li>
-
               <li className="description__item">Шум наружного блока: {selectCard.outdoor_unit_noise} дБ</li>
-
               <li className="description__item">Ширина внутреннего блока: {selectCard.indoor_unit_width} мм</li>
-
               <li className="description__item">Высота внутреннего блока: {selectCard.outdoor_unit_width} мм</li>
-
               <li className="description__item">Глубина внутреннего блока: {selectCard.outdoor_unit_depth} мм</li>
             </ul>
-
             <div className="description__additionally additionally">
               <h5 className="additionally__subtitle">Дополнительные функции:</h5>
               <ul className="additionally__list">
@@ -90,17 +105,13 @@ export const CardItem = () => {
                 ))}
               </ul>
             </div>
-
             <ul className="description__manufacturer manufacturer">
               <li className="manufacturer__item">Страна производства: {selectCard.made_in}</li>
-
               <li className="manufacturer__item">Производитель: {selectCard.manufacturer}</li>
-
               <li className="manufacturer__item">Импортер в РБ: {selectCard.importer}</li>
             </ul>
             <h5 className="description__guarantee">Гарантия: {selectCard.guarantee} мес.</h5>
             <div className="description__price">от {selectCard.price} BYN</div>
-
             <div className="description__button-and-favorite">
               <ButtonAndFavorite title="ЗАКАЗАТЬ" linkTo={`/contacts`} scrollTo="form" card={selectCard} />
             </div>
